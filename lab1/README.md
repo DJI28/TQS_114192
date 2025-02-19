@@ -57,3 +57,8 @@ After writting more unit tests for BoundedSetofNaturals I was able to get the co
 |------|------------------|-------------|
 |Before|54%|50%|
 |After|100%|100%|
+
+### Improving Coverage
+```
+To improve the coverage to the desired 90% of lines, tests for equals and hashcode methods had to be developed, this wasn't really needed since these are basic mehods that don't really need to be tested.
+```
