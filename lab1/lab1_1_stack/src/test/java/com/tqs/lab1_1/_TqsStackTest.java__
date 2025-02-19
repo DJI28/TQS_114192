@@ -1,0 +1,77 @@
+// AI tests
+
+package com.tqs.lab1_1;
+
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.BeforeEach;
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.NoSuchElementException;
+
+class TqsStackTest {
+
+    private TqsStack<Integer> stack;
+    private BoundedTqsStack<Integer> boundedStack;
+
+    @BeforeEach
+    void setUp() {
+        stack = new TqsStack<>();
+        boundedStack = new BoundedTqsStack<>(3);
+    }
+
+    @Test
+    void testStackIsEmptyOnCreation() {
+        assertTrue(stack.isEmpty());
+        assertEquals(0, stack.size());
+    }
+
+    @Test
+    void testPushIncreasesSize() {
+        stack.push(10);
+        assertFalse(stack.isEmpty());
+        assertEquals(1, stack.size());
+    }
+
+    @Test
+    void testPopReturnsLastPushedElement() {
+        stack.push(5);
+        stack.push(10);
+        assertEquals(10, stack.pop());
+        assertEquals(1, stack.size());
+        assertEquals(5, stack.pop());
+        assertTrue(stack.isEmpty());
+    }
+
+    @Test
+    void testPeekReturnsLastElementWithoutRemoving() {
+        stack.push(20);
+        assertEquals(20, stack.peek());
+        assertEquals(1, stack.size());
+    }
+
+    @Test
+    void testPopOnEmptyStackThrowsException() {
+        assertThrows(NoSuchElementException.class, stack::pop);
+    }
+
+    @Test
+    void testPeekOnEmptyStackThrowsException() {
+        assertThrows(NoSuchElementException.class, stack::peek);
+    }
+
+    @Test
+    void testBoundedStackRespectsLimit() {
+        boundedStack.push(1);
+        boundedStack.push(2);
+        boundedStack.push(3);
+        assertThrows(IllegalStateException.class, () -> boundedStack.push(4));
+    }
+
+    @Test
+    void testBoundedStackPushAndPop() {
+        boundedStack.push(10);
+        boundedStack.push(20);
+        assertEquals(20, boundedStack.pop());
+        assertEquals(10, boundedStack.peek());
+    }
+}
