@@ -94,7 +94,7 @@
                                 </limit>
                             </limits>
                             <excludes>
-                                <exclude></exclude> <!-- Exclude main class -->
+                                <exclude>tqs.DemoMain</exclude> <!-- Exclude main class -->
                             </excludes>
                         </rule>
                     </rules>
