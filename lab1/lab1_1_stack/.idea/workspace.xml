@@ -1,4 +1,153 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a757c144-bb02-4637-836f-aa2a2b3a321e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../lab1_1/TQS_lab1_1/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab1_1/TQS_lab1_1/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab1_1/TQS_lab1_1/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab1_1/TQS_lab1_1/src/main/resources/META-INF/maven/archetype.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab1_1/TQS_lab1_1/src/main/resources/archetype-resources/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab1_1/TQS_lab1_1/src/main/resources/archetype-resources/src/main/java/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab1_1/TQS_lab1_1/src/main/resources/archetype-resources/src/test/java/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tqs/lab1_1/BoundedTqsStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tqs/lab1_1/BoundedTqsStack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tqs/lab1_1/TqsStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tqs/lab1_1/TqsStack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/tqs/lab1_1/TqsStackTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/tqs/lab1_1/TqsStackTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2szkCVw0vw8wV9oNcdHiRmT8ZVx" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.All in lab1_1_stack (1).executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.All in lab1_1_stack (2).executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.All in lab1_1_stack (3).executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.All in lab1_1_stack (4).executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.All in lab1_1_stack (5).executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.All in lab1_1_stack.executor&quot;: &quot;Coverage&quot;,
+    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager" selected="JUnit.All in lab1_1_stack (3)">
+    <configuration name="All in lab1_1_stack (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lab1_1_stack" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in lab1_1_stack (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lab1_1_stack" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in lab1_1_stack (3)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lab1_1_stack" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in lab1_1_stack (5)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lab1_1_stack" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in lab1_1_stack" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lab1_1_stack" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.All in lab1_1_stack (3)" />
+        <item itemvalue="JUnit.All in lab1_1_stack (2)" />
+        <item itemvalue="JUnit.All in lab1_1_stack (1)" />
+        <item itemvalue="JUnit.All in lab1_1_stack" />
+        <item itemvalue="JUnit.All in lab1_1_stack (5)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-125ca727e0f0-intellij.indexing.shared.core-IU-243.24978.46" />
+        <option value="bundled-js-predefined-d6986cc7102b-76f8388c3a79-JavaScript-IU-243.24978.46" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a757c144-bb02-4637-836f-aa2a2b3a321e" name="Changes" comment="" />
+      <created>1739465664802</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1739465664802</updated>
+      <workItem from="1739465666424" duration="757000" />
+      <workItem from="1739466428392" duration="1903000" />
+      <workItem from="1739468361973" duration="479000" />
+      <workItem from="1739468847609" duration="577000" />
+      <workItem from="1739707257671" duration="5858000" />
+      <workItem from="1739970817371" duration="1121000" />
+      <workItem from="1739975749426" duration="39000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/lab1_1_stack$All_in_lab1_1_stack__3_.ic" NAME="All in lab1_1_stack (3) Coverage Results" MODIFIED="1739971005888" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/lab1_1_stack$All_in_lab1_1_stack__2_.ic" NAME="All in lab1_1_stack (2) Coverage Results" MODIFIED="1739709772112" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/lab1_1_stack$All_in_lab1_1_stack__4_.ic" NAME="All in lab1_1_stack (4) Coverage Results" MODIFIED="1739709033661" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/lab1_1_stack$All_in_lab1_1_stack__5_.ic" NAME="All in lab1_1_stack (5) Coverage Results" MODIFIED="1739711465787" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/lab1_1_stack$All_in_lab1_1_stack.ic" NAME="All in lab1_1_stack Coverage Results" MODIFIED="1739711512124" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/lab1_1_stack$All_in_lab1_1_stack__1_.ic" NAME="All in lab1_1_stack (1) Coverage Results" MODIFIED="1739711593476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+  </component>
 </project>
