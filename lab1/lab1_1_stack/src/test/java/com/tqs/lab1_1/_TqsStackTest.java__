@@ -2,76 +2,145 @@
 
 package com.tqs.lab1_1;
 
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.BeforeEach;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.NoSuchElementException;
 
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Nested;
+import org.junit.jupiter.api.Test;
+
 class TqsStackTest {
 
-    private TqsStack<Integer> stack;
-    private BoundedTqsStack<Integer> boundedStack;
+    @Nested
+    class TqsStackTests {
+        private TqsStack<Integer> stack;
 
-    @BeforeEach
-    void setUp() {
-        stack = new TqsStack<>();
-        boundedStack = new BoundedTqsStack<>(3);
+        @BeforeEach
+        void setUp() {
+            stack = new TqsStack<>();
+        }
+
+        @Test
+        void testPushAndPop() {
+            assertTrue(stack.isEmpty(), "Stack should be empty initially");
+            stack.push(10);
+            assertEquals(1, stack.size(), "Size should be 1 after one push");
+            int popped = stack.pop();
+            assertEquals(10, popped, "Popped element should be the one pushed");
+            assertTrue(stack.isEmpty(), "Stack should be empty after popping the element");
+        }
+
+        @Test
+        void testPeek() {
+            stack.push(20);
+            stack.push(30);
+            int top = stack.peek();
+            assertEquals(30, top, "Peek should return the last pushed element");
+            assertEquals(2, stack.size(), "Peek should not remove the element");
+        }
+
+        @Test
+        void testPopEmptyStack() {
+            assertThrows(NoSuchElementException.class, () -> {
+                stack.pop();
+            }, "Popping an empty stack should throw NoSuchElementException");
+        }
+
+        @Test
+        void testPeekEmptyStack() {
+            assertThrows(NoSuchElementException.class, () -> {
+                stack.peek();
+            }, "Peeking into an empty stack should throw NoSuchElementException");
+        }
+
+        @Test
+        void testPopTopN() {
+            // Push elements: bottom->1, then 2, 3, top->4
+            stack.push(1);
+            stack.push(2);
+            stack.push(3);
+            stack.push(4);
+
+            // popTopN(2) should remove the top 2 elements (4 then 3)
+            // and return the last removed (3)
+            int result = stack.popTopN(2);
+            assertEquals(3, result, "popTopN should return the last element removed");
+            assertEquals(2, stack.size(), "Stack size should be reduced by 2");
+            assertEquals(2, stack.peek(), "Top element should now be 2");
+        }
+
+        @Test
+        void testPopTopNWithZero() {
+            // When n == 0, the loop does not execute, returning null and leaving the stack unchanged
+            stack.push(100);
+            Integer result = stack.popTopN(0);
+            assertNull(result, "popTopN with 0 should return null");
+            assertEquals(1, stack.size(), "Stack size should remain unchanged when popping 0 elements");
+        }
+
+        @Test
+        void testPopTopNGreaterThanSize() {
+            // When n is greater than the current stack size, eventually removeLast() will be called on an empty list
+            stack.push(1);
+            stack.push(2);
+            assertThrows(NoSuchElementException.class, () -> {
+                stack.popTopN(3);
+            }, "popTopN with n greater than size should throw NoSuchElementException");
+        }
+
+        @Test
+        void testPopTopNNegative() {
+            // With negative n, the loop won't execute, returning null and leaving the stack unchanged
+            stack.push(5);
+            Integer result = stack.popTopN(-1);
+            assertNull(result, "popTopN with negative n should return null");
+            assertEquals(1, stack.size(), "Stack should remain unchanged when n is negative");
+        }
     }
 
-    @Test
-    void testStackIsEmptyOnCreation() {
-        assertTrue(stack.isEmpty());
-        assertEquals(0, stack.size());
-    }
+    @Nested
+    class BoundedTqsStackTests {
+        private BoundedTqsStack<String> boundedStack;
 
-    @Test
-    void testPushIncreasesSize() {
-        stack.push(10);
-        assertFalse(stack.isEmpty());
-        assertEquals(1, stack.size());
-    }
+        @BeforeEach
+        void setUp() {
+            // Create a bounded stack with a maximum size of 2
+            boundedStack = new BoundedTqsStack<>(2);
+        }
 
-    @Test
-    void testPopReturnsLastPushedElement() {
-        stack.push(5);
-        stack.push(10);
-        assertEquals(10, stack.pop());
-        assertEquals(1, stack.size());
-        assertEquals(5, stack.pop());
-        assertTrue(stack.isEmpty());
-    }
+        @Test
+        void testPushWithinBound() {
+            boundedStack.push("first");
+            boundedStack.push("second");
+            assertEquals(2, boundedStack.size(), "Bounded stack should hold two elements");
+            assertEquals("second", boundedStack.peek(), "Top element should be 'second'");
+        }
 
-    @Test
-    void testPeekReturnsLastElementWithoutRemoving() {
-        stack.push(20);
-        assertEquals(20, stack.peek());
-        assertEquals(1, stack.size());
-    }
+        @Test
+        void testPushBeyondBound() {
+            boundedStack.push("first");
+            boundedStack.push("second");
+            // Pushing a third element should throw an IllegalStateException
+            assertThrows(IllegalStateException.class, () -> {
+                boundedStack.push("third");
+            }, "Pushing to a full bounded stack should throw IllegalStateException");
+        }
 
-    @Test
-    void testPopOnEmptyStackThrowsException() {
-        assertThrows(NoSuchElementException.class, stack::pop);
-    }
+        @Test
+        void testPopInBoundedStack() {
+            boundedStack.push("A");
+            boundedStack.push("B");
+            String popped = boundedStack.pop();
+            assertEquals("B", popped, "Pop should return the last pushed element");
+            assertEquals(1, boundedStack.size(), "Size should decrease after pop");
+        }
 
-    @Test
-    void testPeekOnEmptyStackThrowsException() {
-        assertThrows(NoSuchElementException.class, stack::peek);
-    }
-
-    @Test
-    void testBoundedStackRespectsLimit() {
-        boundedStack.push(1);
-        boundedStack.push(2);
-        boundedStack.push(3);
-        assertThrows(IllegalStateException.class, () -> boundedStack.push(4));
-    }
-
-    @Test
-    void testBoundedStackPushAndPop() {
-        boundedStack.push(10);
-        boundedStack.push(20);
-        assertEquals(20, boundedStack.pop());
-        assertEquals(10, boundedStack.peek());
+        @Test
+        void testPeekInBoundedStack() {
+            boundedStack.push("hello");
+            String top = boundedStack.peek();
+            assertEquals("hello", top, "Peek should return the only element");
+        }
     }
 }

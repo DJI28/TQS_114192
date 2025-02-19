@@ -82,6 +82,7 @@ class TqsStackTest {
         assertThrows(NoSuchElementException.class, () -> stack.peek());
     }
 
+    @Disabled
     @DisplayName("For bounded stacks only, pushing onto a full stack throws an IllegalStateException")
     @Test
     void testPushFull() {

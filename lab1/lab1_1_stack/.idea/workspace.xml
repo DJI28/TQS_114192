@@ -5,18 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a757c144-bb02-4637-836f-aa2a2b3a321e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../lab1_1/TQS_lab1_1/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab1_1/TQS_lab1_1/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab1_1/TQS_lab1_1/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab1_1/TQS_lab1_1/src/main/resources/META-INF/maven/archetype.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab1_1/TQS_lab1_1/src/main/resources/archetype-resources/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab1_1/TQS_lab1_1/src/main/resources/archetype-resources/src/main/java/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab1_1/TQS_lab1_1/src/main/resources/archetype-resources/src/test/java/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tqs/lab1_1/BoundedTqsStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tqs/lab1_1/BoundedTqsStack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tqs/lab1_1/TqsStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tqs/lab1_1/TqsStack.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/tqs/lab1_1/TqsStackTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/tqs/lab1_1/TqsStackTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/tqs/lab1_1/_TqsStackTest.java__" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,36 +33,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;JUnit.All in lab1_1_stack (1).executor&quot;: &quot;Coverage&quot;,
-    &quot;JUnit.All in lab1_1_stack (2).executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.All in lab1_1_stack (3).executor&quot;: &quot;Coverage&quot;,
-    &quot;JUnit.All in lab1_1_stack (4).executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.All in lab1_1_stack (5).executor&quot;: &quot;Coverage&quot;,
-    &quot;JUnit.All in lab1_1_stack.executor&quot;: &quot;Coverage&quot;,
-    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.All in lab1_1_stack (1).executor": "Coverage",
+    "JUnit.All in lab1_1_stack (2).executor": "Debug",
+    "JUnit.All in lab1_1_stack (3).executor": "Coverage",
+    "JUnit.All in lab1_1_stack (4).executor": "Coverage",
+    "JUnit.All in lab1_1_stack (5).executor": "Coverage",
+    "JUnit.All in lab1_1_stack.executor": "Coverage",
+    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected="JUnit.All in lab1_1_stack (3)">
-    <configuration name="All in lab1_1_stack (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="lab1_1_stack" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+}]]></component>
+  <component name="RunManager" selected="JUnit.All in lab1_1_stack">
     <configuration name="All in lab1_1_stack (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="lab1_1_stack" />
       <option name="PACKAGE_NAME" value="" />
@@ -80,6 +64,14 @@
       </method>
     </configuration>
     <configuration name="All in lab1_1_stack (3)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lab1_1_stack" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in lab1_1_stack (4)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="lab1_1_stack" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
@@ -105,11 +97,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.All in lab1_1_stack (3)" />
-        <item itemvalue="JUnit.All in lab1_1_stack (2)" />
-        <item itemvalue="JUnit.All in lab1_1_stack (1)" />
         <item itemvalue="JUnit.All in lab1_1_stack" />
         <item itemvalue="JUnit.All in lab1_1_stack (5)" />
+        <item itemvalue="JUnit.All in lab1_1_stack (4)" />
+        <item itemvalue="JUnit.All in lab1_1_stack (3)" />
+        <item itemvalue="JUnit.All in lab1_1_stack (2)" />
       </list>
     </recent_temporary>
   </component>
@@ -136,6 +128,7 @@
       <workItem from="1739707257671" duration="5858000" />
       <workItem from="1739970817371" duration="1121000" />
       <workItem from="1739975749426" duration="39000" />
+      <workItem from="1739991453659" duration="680000" />
     </task>
     <servers />
   </component>
@@ -145,9 +138,9 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/lab1_1_stack$All_in_lab1_1_stack__3_.ic" NAME="All in lab1_1_stack (3) Coverage Results" MODIFIED="1739971005888" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
     <SUITE FILE_PATH="coverage/lab1_1_stack$All_in_lab1_1_stack__2_.ic" NAME="All in lab1_1_stack (2) Coverage Results" MODIFIED="1739709772112" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
-    <SUITE FILE_PATH="coverage/lab1_1_stack$All_in_lab1_1_stack__4_.ic" NAME="All in lab1_1_stack (4) Coverage Results" MODIFIED="1739709033661" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
-    <SUITE FILE_PATH="coverage/lab1_1_stack$All_in_lab1_1_stack__5_.ic" NAME="All in lab1_1_stack (5) Coverage Results" MODIFIED="1739711465787" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
-    <SUITE FILE_PATH="coverage/lab1_1_stack$All_in_lab1_1_stack.ic" NAME="All in lab1_1_stack Coverage Results" MODIFIED="1739711512124" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/lab1_1_stack$All_in_lab1_1_stack__4_.ic" NAME="All in lab1_1_stack (4) Coverage Results" MODIFIED="1739991491973" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/lab1_1_stack$All_in_lab1_1_stack__5_.ic" NAME="All in lab1_1_stack (5) Coverage Results" MODIFIED="1739991572142" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/lab1_1_stack$All_in_lab1_1_stack.ic" NAME="All in lab1_1_stack Coverage Results" MODIFIED="1739992052373" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
     <SUITE FILE_PATH="coverage/lab1_1_stack$All_in_lab1_1_stack__1_.ic" NAME="All in lab1_1_stack (1) Coverage Results" MODIFIED="1739711593476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
   </component>
 </project>
