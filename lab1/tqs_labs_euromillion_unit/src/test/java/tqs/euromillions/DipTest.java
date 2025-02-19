@@ -63,6 +63,26 @@ public class DipTest {
 
     }
 
+    @DisplayName("equals: same elements should be equal")
+    @Test
+    public void testEqualsTrue() {
+        Dip other = new Dip(new int[]{10, 20, 30, 40, 50}, new int[]{1, 2});
+        assertTrue(sampleInstance.equals(other), "equals: same elements should be equal");
+    }
 
+    @DisplayName("equals: different stars should not be equal")
+    @Test
+    public void testEqualsFalse() {
+        Dip other = new Dip(new int[]{1, 2, 3, 4, 5}, new int[]{1, 2});
+        assertFalse(sampleInstance.equals(other), "equals: different numbers should not be equal");
+        assertFalse(sampleInstance.equals(1), "equals: different stars should not be equal");
+        assertFalse(sampleInstance.equals(null), "equals: different stars should not be equal");
+    }
 
+    @DisplayName("hashcode: same elements should have same hashcode")
+    @Test
+    public void testHashCode() {
+        Dip other = new Dip(new int[]{10, 20, 30, 40, 50}, new int[]{1, 2});
+        assertEquals(sampleInstance.hashCode(), other.hashCode(), "hashcode: same elements should have same hashcode");
+    }
 }
