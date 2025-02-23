@@ -5,36 +5,120 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="314c6d20-5d7c-4bb3-90db-44613b0bed0d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tqs/lab2_2/ISimpleHttpClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tqs/lab2_2/ProductFinderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tqs/lab2_2/Rating.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tqs/lab2_2/TqsBasicHttpClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/tqs/lab2_2/ProductFinderServiceIT.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/tqs/lab2_2/ProductFinderServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../lab1/lab1_1_stack/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab1/lab1_1_stack/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tqs/lab2_2/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tqs/lab2_2/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/tqs/lab2_2/AppTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2tJa5BNE2kficdfz1vHwuXDDphZ" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.All in lab2_2_product (1).executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.All in lab2_2_product (2).executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.All in lab2_2_product (3).executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.All in lab2_2_product (4).executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.All in lab2_2_product (5).executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.All in lab2_2_product.executor&quot;: &quot;Debug&quot;,
+    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/diogo/Secretária/3º Ano/2º Semestre/TQS/P/TQS_114192/lab2/lab2_2_product/src/test/java/com/tqs/lab2_2&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/java/com/tqs/lab2_2" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.All in lab2_2_product (1)">
+    <configuration name="All in lab2_2_product (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lab2_2_product" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in lab2_2_product (3)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lab2_2_product" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in lab2_2_product (4)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lab2_2_product" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in lab2_2_product (5)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lab2_2_product" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in lab2_2_product" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lab2_2_product" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.All in lab2_2_product (1)" />
+        <item itemvalue="JUnit.All in lab2_2_product" />
+        <item itemvalue="JUnit.All in lab2_2_product (5)" />
+        <item itemvalue="JUnit.All in lab2_2_product (4)" />
+        <item itemvalue="JUnit.All in lab2_2_product (3)" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -52,6 +136,13 @@
       <option name="presentableId" value="Default" />
       <updated>1740072446466</updated>
       <workItem from="1740072447551" duration="147000" />
+      <workItem from="1740072613782" duration="1822000" />
+      <workItem from="1740268982427" duration="1735000" />
+      <workItem from="1740270723295" duration="39000" />
+      <workItem from="1740270767403" duration="154000" />
+      <workItem from="1740270927056" duration="464000" />
+      <workItem from="1740271397400" duration="545000" />
+      <workItem from="1740271984170" duration="7000" />
     </task>
     <servers />
   </component>
