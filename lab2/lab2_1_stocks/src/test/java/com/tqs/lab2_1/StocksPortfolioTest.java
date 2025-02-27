@@ -38,10 +38,10 @@ public class StocksPortfolioTest {
     @DisplayName("Test total value")
     @Test
     public void getTotalValue() {
-        // 1. Prepare a mock to substitute the remote service (@Mock annotation) (if not using @ExtendWith(MockitoExtension.class) with lombok)
+        // 1. Prepare a mock to substitute the remote service (@Mock annotation) (if not using @ExtendWith(MockitoExtension.class))
         // IStockmarketService stockMarketServiceMock = mock(IStockmarketService.class);
 
-        // 2. Prepare an instance of the subject under test (SuT) and use the mock to set the (remote) service instance. (if not using @InjectMocks with lombok)
+        // 2. Prepare an instance of the subject under test (SuT) and use the mock to set the (remote) service instance. (if not using @InjectMocks)
         // StocksPortfolio stocksPortfolio = new StocksPortfolio(stockMarketServiceMock);
 
         // 3. Load the mock with the proper expectations (when...thenReturn)
@@ -52,7 +52,7 @@ public class StocksPortfolioTest {
         // 4. Execute the test (use the service in the SuT)
         stocksPortfolio.addStock(new Stock("EBAY", 2));
         stocksPortfolio.addStock(new Stock("MSFT", 4));
-        // portfolio.addStock(new Stock("UAVR", 0)); // No problem mock will return 0.0
+        // stocksPortfolio.addStock(new Stock("UAVR", 0)); // No problem mock will return 0.0
         double result = stocksPortfolio.totalValue();
 
         // 5. Verify the result (assert) and the use of the mock (verify)
@@ -60,7 +60,7 @@ public class StocksPortfolioTest {
 
         assertThat( result, is(14.0) ); // hamcrest style
 
-        verify( stockMarketServiceMock, times(2)).lookUpPrice( anyString() );
+        verify( stockMarketServiceMock, times(2)).lookUpPrice( anyString() ); // Change to number 2 to other if error occurs
     }
 
     @DisplayName("Test most valuable stocks")

@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a757c144-bb02-4637-836f-aa2a2b3a321e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/tqs/lab1_1/TqsStackTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/tqs/lab1_1/TqsStackTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/tqs/lab1_1/_TqsStackTest.java__" beforeDir="false" />
-    </list>
+    <list default="true" id="a757c144-bb02-4637-836f-aa2a2b3a321e" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,27 +28,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JUnit.All in lab1_1_stack (1).executor": "Coverage",
-    "JUnit.All in lab1_1_stack (2).executor": "Debug",
-    "JUnit.All in lab1_1_stack (3).executor": "Coverage",
-    "JUnit.All in lab1_1_stack (4).executor": "Coverage",
-    "JUnit.All in lab1_1_stack (5).executor": "Coverage",
-    "JUnit.All in lab1_1_stack.executor": "Coverage",
-    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.All in lab1_1_stack (1).executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.All in lab1_1_stack (2).executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.All in lab1_1_stack (3).executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.All in lab1_1_stack (4).executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.All in lab1_1_stack (5).executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.All in lab1_1_stack.executor&quot;: &quot;Coverage&quot;,
+    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="JUnit.All in lab1_1_stack">
     <configuration name="All in lab1_1_stack (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="lab1_1_stack" />
@@ -129,6 +124,7 @@
       <workItem from="1739970817371" duration="1121000" />
       <workItem from="1739975749426" duration="39000" />
       <workItem from="1739991453659" duration="680000" />
+      <workItem from="1740067801234" duration="177000" />
     </task>
     <servers />
   </component>
