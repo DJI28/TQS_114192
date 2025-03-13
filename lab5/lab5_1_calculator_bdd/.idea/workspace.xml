@@ -5,37 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c368512-fd86-4b14-b721-f2ca5f581569" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../lab3/lab3_2_cars/src/main/java/com/tqs/lab3_2/lab3_2_cars/controllers/CarController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lab3/lab3_2_cars/src/main/java/com/tqs/lab3_2/lab3_2_cars/entities/Car.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lab3/lab3_2_cars/src/main/java/com/tqs/lab3_2/lab3_2_cars/repositories/CarRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lab3/lab3_2_cars/src/main/java/com/tqs/lab3_2/lab3_2_cars/services/CarManagerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lab3/lab3_2_cars/src/main/java/com/tqs/lab3_2/lab3_2_cars/services/impl/CarManagerServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lab3/lab3_2_cars/src/test/java/com/tqs/lab3_2/lab3_2_cars/controller/CarControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lab3/lab3_2_cars/src/test/java/com/tqs/lab3_2/lab3_2_cars/repositories/CarRepositoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lab3/lab3_2_cars/src/test/java/com/tqs/lab3_2/lab3_2_cars/services/CarManagerServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lab4/lab4_1_webdriver_helloworld/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lab4/lab4_1_webdriver_helloworld/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lab4/lab4_1_webdriver_helloworld/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lab4/lab4_1_webdriver_helloworld/src/main/java/com/tqs/lab4_1/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lab4/lab4_1_webdriver_helloworld/src/test/java/com/tqs/lab4_1/HelloWorldEdgeJupiterTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lab4/lab4_2_recording/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lab4/lab4_2_recording/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lab4/lab4_2_recording/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lab4/lab4_2_recording/src/main/java/com/tqs/lab4_2/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lab4/lab4_2_recording/src/test/java/com/tqs/lab4_2/HelloWorldEdgeSeleniumIDETest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lab4/lab4_3_locators/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lab4/lab4_3_locators/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lab4/lab4_3_locators/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lab4/lab4_3_locators/src/main/java/com/tqs/lab4_3/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lab4/lab4_3_locators/src/test/java/com/tqs/lab4_3/AppTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/calculator/Calculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/calculator/CalculatorSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/calculator/CucumberTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/calculator/calculator.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lab3/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab3/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,7 +118,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1741883196616</updated>
-      <workItem from="1741883198640" duration="3647000" />
+      <workItem from="1741883198640" duration="4223000" />
     </task>
     <servers />
   </component>
