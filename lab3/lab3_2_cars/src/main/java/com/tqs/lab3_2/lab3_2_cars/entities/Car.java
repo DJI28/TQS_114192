@@ -18,6 +18,15 @@ public class Car {
     @Column(name = "model")
     private String model;
 
+    @Column(name = "segment")
+    private char segment;
+
+    @Column(name = "motortype")
+    private String enginetype;
+
+    @Column(name = "transmission")
+    private String transmission;
+
     public Car() {
     }
 
@@ -30,6 +39,14 @@ public class Car {
         this.carId = carId;
         this.maker = maker;
         this.model = model;
+    }
+
+    public Car(String maker, String model, char segment, String enginetype, String transmission) {
+        this.maker = maker;
+        this.model = model;
+        this.segment = segment;
+        this.enginetype = enginetype;
+        this.transmission = transmission;
     }
 
     @Override
@@ -54,6 +71,18 @@ public class Car {
         return model;
     }
 
+    public char getSegment() {
+        return segment;
+    }
+
+    public String getEnginetype() {
+        return enginetype;
+    }
+
+    public String getTransmission() {
+        return transmission;
+    }
+
     public void setCarId(Long carId) {
         this.carId = carId;
     }
@@ -66,12 +95,27 @@ public class Car {
         this.model = model;
     }
 
+    public void setSegment(char segment) {
+        this.segment = segment;
+    }
+
+    public void setEnginetype(String enginetype) {
+        this.enginetype = enginetype;
+    }
+
+    public void setTransmission(String transmission) {
+        this.transmission = transmission;
+    }
+
     @Override
     public String toString() {
         return "Car{" +
                 "carId=" + carId +
                 ", maker='" + maker + '\'' +
                 ", model='" + model + '\'' +
+                ", segment=" + segment +
+                ", motortype='" + enginetype + '\'' +
+                ", transmission='" + transmission + '\'' +
                 '}';
     }
 }

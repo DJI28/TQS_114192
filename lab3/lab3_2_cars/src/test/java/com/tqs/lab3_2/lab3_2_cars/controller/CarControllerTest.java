@@ -114,4 +114,20 @@ public class CarControllerTest {
 
         verify(service, times(1)).getCarDetails(999L);
     }
+
+    @Test
+    @DisplayName("Test get similar car")
+    public void givenSimilarCar_whenGetSimilarCar_thenReturnJson() throws Exception {
+        Car car1 = new Car("Audi", "A4", 'D', "I4", "Manual");
+        car1.setCarId(1L);
+        Car car2 = new Car("BMW", "420d", 'D', "I4", "Manual");
+        car2.setCarId(2L);
+
+        when(service.findSimilar(1L)).thenReturn(Optional.of(car2));
+
+        mvc.perform(get("/api/v1/cars/similar/1"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.maker").value("BMW"))
+                .andExpect(jsonPath("$.model").value("420d"));
+    }
 }

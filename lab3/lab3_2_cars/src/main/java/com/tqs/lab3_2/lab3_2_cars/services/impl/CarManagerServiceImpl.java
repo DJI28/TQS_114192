@@ -32,4 +32,13 @@ public class CarManagerServiceImpl implements CarManagerService {
     public Optional<Car> getCarDetails(Long id) {
         return carRepository.findById(id);
     }
+
+    @Override
+    public Optional<Car> findSimilar(Long id) {
+        return carRepository.findById(id)
+                .flatMap(car -> carRepository.findBySegmentAndEnginetypeAndTransmission(car.getSegment(), car.getEnginetype(), car.getTransmission())
+                .stream()
+                .filter(replacement -> !replacement.getCarId().equals(id))
+                .findFirst());
+    }
 }

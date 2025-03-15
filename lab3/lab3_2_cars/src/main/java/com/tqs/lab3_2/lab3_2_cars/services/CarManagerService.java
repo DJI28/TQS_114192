@@ -12,4 +12,5 @@ public interface CarManagerService {
     Car save(Car Car);
     List<Car> getAllCars();
     Optional<Car> getCarDetails(Long id);
+    Optional<Car> findSimilar(Long id);
 }

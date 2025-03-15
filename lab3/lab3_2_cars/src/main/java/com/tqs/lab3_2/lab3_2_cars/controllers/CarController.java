@@ -38,4 +38,11 @@ public class CarController {
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
+    @GetMapping("/similar/{id}")
+    public ResponseEntity<Car> getSimilarCar(@PathVariable Long id) {
+        return carManagerService.findSimilar(id)
+                .map(ResponseEntity::ok)
+                .orElseGet(() -> ResponseEntity.notFound().build());
+    }
+
 }

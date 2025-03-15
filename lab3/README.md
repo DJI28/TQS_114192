@@ -30,4 +30,32 @@ Test D tests from the boudary to the repository layer this will thus load all th
 Test E is used to test all of the Spring Boot application with no mocking and simulating real HTTP client interactions wuth the REST API, to start the full Spring Boot context on a random port `@SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)` is used. `TestRestTemplate` will be used to send real HTTP requests to the application and an actual database will be used (configured by `@TestPropertySource`). This test tests the complete API as a real client would including request serialization, response deserialization and HTTP behaviour.
 
 ## Lab3_2
+
+### TDD Aproach
+In this exercise I used a TDD aproach from top to bottom, i.e, starting from the contoller and only developing this module and testing it, then the service and then the repository as indicated in the PDF file.
+
 ## Lab3_3
+
+### IT Test
+To make the integration test I used the test in the suggestion, adapting just the classes and ading more tests to test every endpoint. A `MySQL` server in docker was used to store the data.
+
+### c) What could be the advantages and disadvantages of using a real database connection in testing activities?
+Using a real database in testing activities can be useful for the following reasons:
+- Realistic Testing Enviroment `->` A real database will ensure tests are closer to real-world scenarios, reducing discrepancies between test and production enviroments;
+- Detect Schema and Query Issues `->` Helps identify issues related to database schemas, constraints, migrations and some queries that might not be detected in mocked or in-memory databases;
+- Validates ORM (Object Relational Mapper) and Repository Logic `->` Ensures that the persistence layer (JPA, Hibernate, etc) are working correctly including relationships, transactions and cascading effects;
+- Ensures Data Integrity `->` Can catch issues related to indexing, constraints (e.g, unique keys, foreign keys), and data persistence that can be missed in mocks; 
+- Prevents Over-Mocking `->` Some database-related logic cannot be effectively tested with mocks, making real databse tests more reliable.
+
+---
+
+However, testing with real databases can also have disadvantages such as:
+- Slower Execution `->` Connecting to a real database can take time as well as database operations (queries, inserts, updates) take more time than using an in-memory alternative or mocking;
+- Complex Setup and Maintenance `->` Since testing with a real database will require a properly configured database, which might need additional setup with Docker, scripts or test migrations;
+- Risk of Data Contamination `->` If not properly isolated, tests may leave residual data, causing inconsistent results between test runs;
+- Concurrency Issues `->` Running multiple tests that modify the database can introduce concurrency issues and flaky test behavior;
+- External Dependencies `->` If the database is down or misconfigured, tests may fail to infrastructure issues rather than actual code problems.
+
+---
+
+Real databases should be used for integration tests, where repository behavior, constaints or real queries need validation;  performace testing to measure query execution time and optimize indexes and end-to-end testgin when verifying the full stack with real data. And should be avoided for unit tests where mocking is sufficient and fast execution is crucial (in the milliseconds range) and for CI/CD (Continous Integration Continous Development) unless using a lighweight, dedicated test database (e.g, Dockerized MySQL (as used in the exercise) or PostgreSQL).
