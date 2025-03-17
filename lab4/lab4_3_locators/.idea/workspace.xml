@@ -4,23 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="610bedc0-7e6c-4021-beb8-546b43039b73" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../lab4_1_webdriver_helloworld/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab4_1_webdriver_helloworld/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab4_1_webdriver_helloworld/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab4_1_webdriver_helloworld/src/main/java/com/tqs/lab4_1/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab4_1_webdriver_helloworld/src/test/java/com/tqs/lab4_1/HelloWorldEdgeJupiterTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab4_2_recording/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab4_2_recording/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab4_2_recording/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab4_2_recording/src/main/java/com/tqs/lab4_2/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab4_2_recording/src/test/java/com/tqs/lab4_2/HelloWorldEdgeSeleniumIDETest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tqs/lab4_3/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/tqs/lab4_3/AppTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="610bedc0-7e6c-4021-beb8-546b43039b73" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -131,6 +115,7 @@
       <workItem from="1741453485063" duration="885000" />
       <workItem from="1741456181489" duration="3000" />
       <workItem from="1741624502307" duration="16000" />
+      <workItem from="1742060024402" duration="72000" />
     </task>
     <servers />
   </component>
