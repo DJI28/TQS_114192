@@ -30,7 +30,7 @@ class BasicLoginJupiterTest {
     }
 
     @Test
-    void testBasicLoginSuccess() {
+    void testBasicLoginSuccess() throws InterruptedException {
         login.with("user", "user");
         assertThat(login.successBoxPresent()).isTrue();
     }

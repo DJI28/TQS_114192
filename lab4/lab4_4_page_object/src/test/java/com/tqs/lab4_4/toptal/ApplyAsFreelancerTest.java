@@ -2,9 +2,8 @@ package com.tqs.lab4_4.toptal;
 
 import io.github.bonigarcia.seljup.SeleniumJupiter;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.junit.jupiter.api.Test;
@@ -12,6 +11,7 @@ import org.junit.jupiter.api.AfterEach;
 
 import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
 
+@DisplayName("Apply as Freelancer Test")
 public class ApplyAsFreelancerTest {
     WebDriver driver;
 
@@ -23,15 +23,13 @@ public class ApplyAsFreelancerTest {
     @Test
     public void applyAsFreelancer() throws InterruptedException {
         HomePage home = new HomePage(driver);
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(30, java.util.concurrent.TimeUnit.SECONDS);
         home.clickFreelancerApplyButton();
 
         FreelancerApplyPage applyPage = new FreelancerApplyPage(driver);
 
         assertThat(applyPage.isPageOpened()).isTrue();
 
-        //applyPage.setFreelancerTalentType("Developer"); // Not able to make this work
+        applyPage.setFreelancerTalentType("Developer"); // Not able to make this work
         applyPage.setFreelancerFullName("Diogo Domingues Automated Test");
         applyPage.setFreelancerEmail("diogo@ua.pt");
         applyPage.setFreelancerPassword("password123");
@@ -48,19 +46,18 @@ public class ApplyAsFreelancerTest {
 }
 
 @ExtendWith(SeleniumJupiter.class)
+@DisplayName("Apply as Freelancer Test with Selenium Jupiter")
 class SelJupFreelancerApplyTest {
     @Test
-    public void applyAsFreelancer(EdgeDriver driver) throws  InterruptedException {
+    public void applyAsFreelancer(EdgeDriver driver) throws InterruptedException {
         HomePage home = new HomePage(driver);
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(30, java.util.concurrent.TimeUnit.SECONDS); //
         home.clickFreelancerApplyButton();
 
         FreelancerApplyPage applyPage = new FreelancerApplyPage(driver);
 
         assertThat(applyPage.isPageOpened()).isTrue();
 
-        //applyPage.setFreelancerTalentType("Developer"); // Not able to make this work
+        applyPage.setFreelancerTalentType("Developer"); // Not able to make this work
         applyPage.setFreelancerFullName("Diogo Domingues Automated Test");
         applyPage.setFreelancerEmail("diogo@ua.pt");
         applyPage.setFreelancerPassword("password123");

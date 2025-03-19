@@ -13,8 +13,11 @@ public class HomePage {
 
     private final static String PAGE_URL = "https://www.toptal.com/";
 
-    @FindBy(xpath="//ul[@id='navbar-actions-toolbar']/li/a")
+    @FindBy(xpath="//*[@id=\"navbar-actions-toolbar\"]/li[1]/a")
     private WebElement freelancerApplyButton;
+
+    @FindBy(xpath = "//*[@id=\"nav\"]/div/button")
+    private WebElement burgerMenuButton;
 
     public HomePage(WebDriver driver) {
         this.driver = driver;
@@ -23,6 +26,13 @@ public class HomePage {
     }
 
     public void clickFreelancerApplyButton() throws InterruptedException {
-        freelancerApplyButton.click();
+        Thread.sleep(1000); // Necessary to wait for the page to load
+        if (freelancerApplyButton.isDisplayed()) {
+            freelancerApplyButton.click();
+        } else {
+            burgerMenuButton.click();
+            Thread.sleep(1000); // Necessary to wait for the menu to open
+            freelancerApplyButton.click();
+        }
     }
 }

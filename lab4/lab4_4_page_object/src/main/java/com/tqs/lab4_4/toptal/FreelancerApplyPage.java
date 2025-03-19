@@ -15,11 +15,11 @@ public class FreelancerApplyPage {
     @FindBy(tagName="h1")
     WebElement heading;
 
-    // Cannot make it work in Page Factory, done in "normal" way
-    /*
-    @FindBy(xpath="//form/div/div/div")
+    @FindBy(xpath="//*[@id=\"talent-apply-form\"]/div[1]/div/div/div")
     WebElement freelancer_talent_type;
-    */
+
+    @FindBy(xpath = "//*[@id=\"talent-apply-form\"]/div[1]/div/ul/li[1]")
+    WebElement talent_type_developer;
 
     @FindBy(id="talent_create_applicant[fullName]")
     WebElement freelancer_full_name;
@@ -41,11 +41,11 @@ public class FreelancerApplyPage {
         PageFactory.initElements(driver, this);
     }
 
-    /*
-    public void setFreelancerTalentType(String talent_type) {
+    public void setFreelancerTalentType(String talent_type) throws InterruptedException {
+        Thread.sleep(1000); // Necessary to wait for the page to load
         freelancer_talent_type.click();
+        talent_type_developer.click();
     }
-     */
 
     public void setFreelancerFullName(String full_name) {
         freelancer_full_name.clear();

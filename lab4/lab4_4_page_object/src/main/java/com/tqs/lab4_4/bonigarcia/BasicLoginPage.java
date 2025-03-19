@@ -29,7 +29,8 @@ public class BasicLoginPage {
         driver.findElement(submitButton).click();
     }
 
-    public boolean successBoxPresent() {
+    public boolean successBoxPresent() throws InterruptedException {
+        Thread.sleep(1000);
         return driver.findElement(successBox).isDisplayed();
     }
 

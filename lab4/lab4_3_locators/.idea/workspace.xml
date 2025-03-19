@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="610bedc0-7e6c-4021-beb8-546b43039b73" name="Changes" comment="" />
+    <list default="true" id="610bedc0-7e6c-4021-beb8-546b43039b73" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../lab4_4_page_object/src/main/java/com/tqs/lab4_4/blazedemo/BlazeDemoBasePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab4_4_page_object/src/main/java/com/tqs/lab4_4/blazedemo/BlazeDemoFactoryPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab4_4_page_object/src/test/java/com/tqs/lab4_4/blazedemo/BlazeDemoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab4_4_page_object/src/main/java/com/tqs/lab4_4/bonigarcia/BasicLoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab4_4_page_object/src/main/java/com/tqs/lab4_4/bonigarcia/BasicLoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab4_4_page_object/src/main/java/com/tqs/lab4_4/toptal/FreelancerApplyPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab4_4_page_object/src/main/java/com/tqs/lab4_4/toptal/FreelancerApplyPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab4_4_page_object/src/main/java/com/tqs/lab4_4/toptal/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab4_4_page_object/src/main/java/com/tqs/lab4_4/toptal/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab4_4_page_object/src/test/java/com/tqs/lab4_4/bonigarcia/BasicLoginJupiterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab4_4_page_object/src/test/java/com/tqs/lab4_4/bonigarcia/BasicLoginJupiterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab4_4_page_object/src/test/java/com/tqs/lab4_4/toptal/ApplyAsFreelancerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab4_4_page_object/src/test/java/com/tqs/lab4_4/toptal/ApplyAsFreelancerTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -116,6 +127,10 @@
       <workItem from="1741456181489" duration="3000" />
       <workItem from="1741624502307" duration="16000" />
       <workItem from="1742060024402" duration="72000" />
+      <workItem from="1742413444629" duration="8000" />
+      <workItem from="1742413490175" duration="14000" />
+      <workItem from="1742413570205" duration="46000" />
+      <workItem from="1742423482175" duration="5000" />
     </task>
     <servers />
   </component>
