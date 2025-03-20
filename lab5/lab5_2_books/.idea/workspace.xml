@@ -5,15 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2bb0db82-4428-47ca-ac60-3bd68dea5c8a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tqs/lab5_2/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tqs/lab5_2/Library.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/tqs/lab5_2/CucumberTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/tqs/lab5_2/SearchBookTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/com.tqs.lab5_2/search_book.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/junit-platform.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tqs/lab5_2/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tqs/lab5_2/Library.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tqs/lab5_2/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tqs/lab5_2/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/tqs/lab5_2/SearchBookTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/tqs/lab5_2/SearchBookTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/com.tqs.lab5_2/search_book.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/com.tqs.lab5_2/search_book.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,6 +67,9 @@
       <updated>1741887611087</updated>
       <workItem from="1741887612206" duration="1262000" />
       <workItem from="1741976190926" duration="11000" />
+      <workItem from="1742471348825" duration="2239000" />
+      <workItem from="1742487052416" duration="8000" />
+      <workItem from="1742487132568" duration="18000" />
     </task>
     <servers />
   </component>
