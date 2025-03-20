@@ -42,7 +42,7 @@ public class BlazeDemoBasePage {
 
     public void click (WebElement element) throws InterruptedException {
         element.click();
-        Thread.sleep(1000);
+        Thread.sleep(1000); // Necessary to wait for the page or element to load
     }
 
     public void type (WebElement element, String text) {
