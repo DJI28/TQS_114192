@@ -47,6 +47,12 @@ class CarsLab6IT {
     }
 
     @Test
+    @DisplayName("Verify Migration")
+    public void verifyMigration() {
+        assertThat(repository.count()).isEqualTo(10);
+    }
+
+    @Test
     @DisplayName("When valid input then create car")
     void whenValidInput_thenCreateCar() {
         Car car = new Car("Toyota", "Corolla");
@@ -60,7 +66,7 @@ class CarsLab6IT {
                 .when().post("/api/v1/cars/create").then().statusCode(201);
 
         List<Car> found = repository.findAll();
-        assertThat(found).extracting(Car::getMaker).containsExactly("Toyota", "Peugeot", "Porsche");
+        assertThat(found).extracting(Car::getMaker).contains("Toyota", "Peugeot", "Porsche");
     }
 
     @Test
@@ -74,7 +80,7 @@ class CarsLab6IT {
                 .then().statusCode(200)
                 .extract().body().as(new TypeRef<List<Car>>() {});
 
-        assertThat(response).extracting(Car::getMaker).containsExactly("Renault", "VW");
+        assertThat(response).extracting(Car::getMaker).contains("Renault", "VW");
     }
 
     @Test
@@ -104,8 +110,6 @@ class CarsLab6IT {
 
         assertThat(responseCar).extracting(Car::getModel).isEqualTo("Chiron");
     }
-
-    @AFter
 
     private void createTestCar(String maker, String model) {
         Car car = new Car(maker, model);

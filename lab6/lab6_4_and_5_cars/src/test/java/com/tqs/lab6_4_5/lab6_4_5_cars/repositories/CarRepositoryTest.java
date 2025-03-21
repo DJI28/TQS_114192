@@ -2,6 +2,7 @@ package com.tqs.lab6_4_5.lab6_4_5_cars.repositories;
 
 import com.tqs.lab6_4_5.lab6_4_5_cars.entities.Car;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName;
 
@@ -20,6 +21,11 @@ public class CarRepositoryTest {
 
     @Autowired
     private CarRepository carRepository;
+
+    @BeforeEach
+    public void setup() {
+        carRepository.deleteAll();
+    }
 
     @Test
     @DisplayName("Test find car by id")

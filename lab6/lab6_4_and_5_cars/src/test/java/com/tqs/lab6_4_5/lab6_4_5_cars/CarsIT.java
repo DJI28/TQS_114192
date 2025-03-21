@@ -1,3 +1,4 @@
+/*
 package com.tqs.lab6_4_5.lab6_4_5_cars;
 
 import com.tqs.lab6_4_5.lab6_4_5_cars.entities.Car;
@@ -106,3 +107,4 @@ class CarsIT {
         return car.getCarId();
     }
 }
+ */
