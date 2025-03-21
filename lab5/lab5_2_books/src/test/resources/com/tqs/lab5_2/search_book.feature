@@ -32,8 +32,8 @@ Feature: Book search
       | How to cook a dino | Fred Flintstone | 2012-01-01 |
     When the customer searches for books published between 2013-03-01 and 2014-09-25
     Then 2 books should have been found
-      And Book 1 should have the title 'Some other book'
-      And Book 2 should have the title 'One good book'
+    And Book 1 should have the title 'Some other book'
+    And Book 2 should have the title 'One good book'
   Scenario: Search books by author
     Given a library with the following books:
       | title           | author        | published |

@@ -34,8 +34,14 @@ public class StudentMigrationTest {
         registry.add("spring.datasource.url", container::getJdbcUrl);
         registry.add("spring.datasource.username", container::getUsername);
         registry.add("spring.datasource.password", container::getPassword);
-        registry.add("spring.jpa.hibernate.ddl-auto", () -> "create-drop");
         registry.add("spring.jpa.properties.hibernate.dialect", () -> "org.hibernate.dialect.PostgreSQLDialect");
+    }
+
+    @Test
+    @DisplayName("Verify migration")
+    @Order(0)
+    public void verifyMigration() {
+        assertThat(studentRepository.count()).isEqualTo(10);
     }
 
     @Test
@@ -50,9 +56,12 @@ public class StudentMigrationTest {
     @DisplayName("Retrieve student by number")
     @Order(2)
     public void retrieveStudentByNumber() {
-        Student student = studentRepository.findByNumber(123456);
-        Student compare = new Student( 123456, "John Doe", "john@student.com", LocalDate.of(2000, 1, 1), 'M');
-        assertThat(student.toString()).isEqualTo(compare.toString());
+        Student student1 = studentRepository.findByNumber(123456);
+        Student compare1 = new Student( 123456, "John Doe", "john@student.com", LocalDate.of(2000, 1, 1), 'M');
+        Student student2 = studentRepository.findByNumber(10);
+        Student compare2 = new Student(10, "Jack Wilson", "jack@student.com", LocalDate.of(2000, 10, 1), 'M');
+        assertThat(student1.toString()).isEqualTo(compare1.toString());
+        assertThat(student2.toString()).isEqualTo(compare2.toString());
     }
 
     @Test
@@ -73,8 +82,13 @@ public class StudentMigrationTest {
     @DisplayName("Delete student")
     @Order(4)
     public void deleteStudent() {
-        Student student = studentRepository.findByNumber(123456);
-        studentRepository.delete(student);
+        Student student1 = studentRepository.findByNumber(123456);
+        assertThat(student1.toString()).isNotNull();
+        Student student2 = studentRepository.findByNumber(1);
+        assertThat(student2.toString()).isNotNull();
+        studentRepository.delete(student1);
+        studentRepository.delete(student2);
         assertThat(studentRepository.findByNumber(123456)).isNull();
+        assertThat(studentRepository.findByNumber(1)).isNull();
     }
 }
