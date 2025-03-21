@@ -9,6 +9,6 @@ public class Utils {
     }
 
     public static LocalDateTime isoTextToLocalDate(String isoText){
-        return LocalDateTime.parse(isoText);
+        return LocalDate.parse(isoText).atStartOfDay();
     }
 }

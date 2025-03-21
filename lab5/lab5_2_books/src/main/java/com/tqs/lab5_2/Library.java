@@ -6,7 +6,7 @@ import java.util.List;
 import java.time.LocalDate;
 
 public class Library {
-    private static final List<Book> store = new ArrayList<>();
+    private final List<Book> store = new ArrayList<>();
 
     public Library() {}
 
@@ -31,6 +31,7 @@ public class Library {
                 books.add(book);
             }
         }
+        books.sort((b1, b2) -> b2.getPublished().compareTo(b1.getPublished()));
         return books;
     }
 }
