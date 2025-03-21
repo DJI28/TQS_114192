@@ -4,40 +4,49 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b75855cb-57e6-4f0a-a044-08aecf31c020" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../lab5/lab5_2_books/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab5/lab5_2_books/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lab5/lab5_3_cover/src/main/java/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab5/lab5_3_cover/src/main/java/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/tqs/lab6_3/RestAssuredTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/tqs/lab6_3/RestAssuredTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab6_4_and_5_cars/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6_4_and_5_cars/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab6_4_and_5_cars/src/test/java/com/tqs/lab6_4_5/lab6_4_5_cars/CarsLab6IT.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6_4_and_5_cars/src/test/java/com/tqs/lab6_4_5/lab6_4_5_cars/CarsLab6IT.java" afterDir="false" />
+    <list default="true" id="44291ea0-b5e8-4763-8949-10a37ce2e488" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab5_2_books/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab5_2_books/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 6
+  &quot;associatedIndex&quot;: 7
 }</component>
-  <component name="ProjectId" id="2uaiDafig1CxeSFUnNQ0pwWmgJs" />
+  <component name="ProjectId" id="2ubUSTz6gngZD38LCRILKNnz01w" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-    &quot;JUnit.All in lab6_3_rest_assured (1).executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.All in lab6_3_rest_assured (2).executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.All in lab6_3_rest_assured (3).executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.All in lab6_3_rest_assured.executor&quot;: &quot;Debug&quot;,
-    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.All in cucumber-java-skeleton (1).executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.All in cucumber-java-skeleton (2).executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.All in cucumber-java-skeleton.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.All in lab5_3_cover (1).executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.All in lab5_3_cover (2).executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.All in lab5_3_cover (3).executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.All in lab5_3_cover (4).executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.All in lab5_3_cover (5).executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.All in lab5_3_cover.executor&quot;: &quot;Debug&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/diogo/Secretária/3º Ano/2º Semestre/TQS/P/TQS_114192/lab5/lab5_3_cover&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -46,33 +55,41 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.All in lab6_3_rest_assured (3)">
-    <configuration name="All in lab6_3_rest_assured (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="lab6_3_rest_assured" />
+  <component name="RunManager" selected="JUnit.All in lab5_3_cover (3)">
+    <configuration name="All in lab5_3_cover (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lab5_3_cover" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="All in lab6_3_rest_assured (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="lab6_3_rest_assured" />
+    <configuration name="All in lab5_3_cover (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lab5_3_cover" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="All in lab6_3_rest_assured (3)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="lab6_3_rest_assured" />
+    <configuration name="All in lab5_3_cover (3)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lab5_3_cover" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="All in lab6_3_rest_assured" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="lab6_3_rest_assured" />
+    <configuration name="All in lab5_3_cover (5)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lab5_3_cover" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in lab5_3_cover" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lab5_3_cover" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
       <method v="2">
@@ -81,10 +98,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.All in lab6_3_rest_assured (3)" />
-        <item itemvalue="JUnit.All in lab6_3_rest_assured (2)" />
-        <item itemvalue="JUnit.All in lab6_3_rest_assured (1)" />
-        <item itemvalue="JUnit.All in lab6_3_rest_assured" />
+        <item itemvalue="JUnit.All in lab5_3_cover (3)" />
+        <item itemvalue="JUnit.All in lab5_3_cover (2)" />
+        <item itemvalue="JUnit.All in lab5_3_cover (1)" />
+        <item itemvalue="JUnit.All in lab5_3_cover" />
+        <item itemvalue="JUnit.All in lab5_3_cover (5)" />
       </list>
     </recent_temporary>
   </component>
@@ -99,16 +117,17 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b75855cb-57e6-4f0a-a044-08aecf31c020" name="Changes" comment="" />
-      <created>1742492967157</created>
+      <changelist id="44291ea0-b5e8-4763-8949-10a37ce2e488" name="Changes" comment="" />
+      <created>1742516767138</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1742492967157</updated>
-      <workItem from="1742492968239" duration="573000" />
-      <workItem from="1742572435588" duration="866000" />
-      <workItem from="1742575600874" duration="45000" />
-      <workItem from="1742579366706" duration="94000" />
-      <workItem from="1742585193302" duration="4000" />
+      <updated>1742516767138</updated>
+      <workItem from="1742516768391" duration="123000" />
+      <workItem from="1742548692824" duration="13000" />
+      <workItem from="1742548713693" duration="26000" />
+      <workItem from="1742549082101" duration="5128000" />
+      <workItem from="1742554218069" duration="377000" />
+      <workItem from="1742572427864" duration="7000" />
     </task>
     <servers />
   </component>

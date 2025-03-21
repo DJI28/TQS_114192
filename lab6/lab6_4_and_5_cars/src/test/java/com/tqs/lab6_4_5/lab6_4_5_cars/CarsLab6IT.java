@@ -2,43 +2,48 @@ package com.tqs.lab6_4_5.lab6_4_5_cars;
 
 import com.tqs.lab6_4_5.lab6_4_5_cars.entities.Car;
 import com.tqs.lab6_4_5.lab6_4_5_cars.repositories.CarRepository;
-import org.junit.jupiter.api.AfterEach;
+import io.restassured.common.mapper.TypeRef;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
-import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.test.web.server.LocalServerPort;
-import org.springframework.core.ParameterizedTypeReference;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.test.context.TestPropertySource;
+import org.springframework.test.context.DynamicPropertyRegistry;
+import org.springframework.test.context.DynamicPropertySource;
+import org.testcontainers.containers.PostgreSQLContainer;
+import org.testcontainers.junit.jupiter.Container;
+import org.testcontainers.junit.jupiter.Testcontainers;
+import static io.restassured.RestAssured.*;
 
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
-@SpringBootTest
-@Test
+@Testcontainers
 class CarsLab6IT {
 
     // will need to use the server port for the invocation url
     @LocalServerPort
     int randomServerPort;
 
-    // a REST client that is test-friendly
-    @Autowired
-    private TestRestTemplate restTemplate;
+    @Container
+    public static PostgreSQLContainer container = new PostgreSQLContainer("postgres:13.2")
+            .withDatabaseName("cars")
+            .withUsername("cars001")
+            .withPassword("password001");
 
     @Autowired
     private CarRepository repository;
 
-    @AfterEach
-    public void resetDb() {
-        repository.deleteAll();
+    @DynamicPropertySource
+    static void properties(DynamicPropertyRegistry registry) {
+        registry.add("spring.datasource.url", container::getJdbcUrl);
+        registry.add("spring.datasource.username", container::getUsername);
+        registry.add("spring.datasource.password", container::getPassword);
+        //registry.add("spring.jpa.hibernate.ddl-auto", () -> "create-drop"); // Only need if not using Flyway or Liquibase
+        registry.add("spring.jpa.properties.hibernate.dialect", () -> "org.hibernate.dialect.PostgreSQLDialect");
     }
 
     @Test
@@ -47,9 +52,12 @@ class CarsLab6IT {
         Car car = new Car("Toyota", "Corolla");
         Car car2 = new Car("Peugeot", "308SW");
         Car car3 = new Car("Porsche", "911 GT3 RS", 'S', "F6", "Manual");
-        restTemplate.postForEntity("/api/v1/cars/create", car, Car.class);
-        restTemplate.postForEntity("/api/v1/cars/create", car2, Car.class);
-        restTemplate.postForEntity("/api/v1/cars/create", car3, Car.class);
+        given().port(randomServerPort).contentType("application/json").body(car)
+                .when().post("/api/v1/cars/create").then().statusCode(201);
+        given().port(randomServerPort).contentType("application/json").body(car2)
+                .when().post("/api/v1/cars/create").then().statusCode(201);
+        given().port(randomServerPort).contentType("application/json").body(car3)
+                .when().post("/api/v1/cars/create").then().statusCode(201);
 
         List<Car> found = repository.findAll();
         assertThat(found).extracting(Car::getMaker).containsExactly("Toyota", "Peugeot", "Porsche");
@@ -61,12 +69,12 @@ class CarsLab6IT {
         createTestCar("Renault", "Clio");
         createTestCar("VW", "Golf");
 
-        ResponseEntity<List<Car>> response = restTemplate
-                .exchange("/api/v1/cars/all", HttpMethod.GET, null, new ParameterizedTypeReference<List<Car>>() {
-                });
+        List<Car> response = given().port(randomServerPort).contentType("application/json")
+                .when().get("/api/v1/cars/all")
+                .then().statusCode(200)
+                .extract().body().as(new TypeRef<List<Car>>() {});
 
-        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
-        assertThat(response.getBody()).extracting(Car::getMaker).containsExactly("Renault", "VW");
+        assertThat(response).extracting(Car::getMaker).containsExactly("Renault", "VW");
     }
 
     @Test
@@ -75,10 +83,12 @@ class CarsLab6IT {
         Car car = new Car("Ford", "Focus");
         Car savedCar = repository.saveAndFlush(car);
 
-        ResponseEntity<Car> response = restTemplate.getForEntity("/api/v1/cars/id/" + savedCar.getCarId(), Car.class);
+        Car response = given().port(randomServerPort).contentType("application/json")
+                .when().get("/api/v1/cars/id/" + savedCar.getCarId())
+                .then().statusCode(200)
+                .extract().body().as(Car.class);
 
-        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
-        assertThat(response.getBody()).extracting(Car::getMaker).isEqualTo("Ford");
+        assertThat(response).extracting(Car::getMaker).isEqualTo("Ford");
     }
 
     @Test
@@ -87,11 +97,15 @@ class CarsLab6IT {
         Long id = createTestCar("Bugatti", "Veyron", 'S', "W16", "Automatic");
         createTestCar("Bugatti", "Chiron", 'S', "W16", "Automatic");
 
-        ResponseEntity<Car> response = restTemplate.getForEntity("/api/v1/cars/similar/" + id, Car.class);
+        Car responseCar = given().port(randomServerPort).contentType("application/json")
+                .when().get("/api/v1/cars/similar/" + id)
+                .then().statusCode(200)
+                .extract().body().as(Car.class);
 
-        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
-        assertThat(response.getBody()).extracting(Car::getModel).isEqualTo("Chiron");
+        assertThat(responseCar).extracting(Car::getModel).isEqualTo("Chiron");
     }
+
+    @AFter
 
     private void createTestCar(String maker, String model) {
         Car car = new Car(maker, model);

@@ -5,30 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="44291ea0-b5e8-4763-8949-10a37ce2e488" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../lab5_1_calculator_bdd/src/test/java/com/tqs/lab5_2/CucumberTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab5_1_calculator_bdd/src/test/java/com/tqs/lab5_2/SearchBookSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/com/tqs/lab5_2/search_book.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lab6/lab6_1_test_containers/src/main/java/com/tqs/lab6_1/entities/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lab6/lab6_1_test_containers/src/main/java/com/tqs/lab6_1/repositories/StudentRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lab6/lab6_1_test_containers/src/test/java/com/tqs/lab6_1/StudentMigrationTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lab6/lab6_1_test_containers/src/test/java/com/tqs/lab6_1/StudentTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lab6/lab6_1_test_containers/src/test/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lab6/lab6_1_test_containers/src/test/resources/db/migration/V001__INIT.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lab6/lab6_3_rest_assured/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lab6/lab6_3_rest_assured/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lab6/lab6_3_rest_assured/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lab6/lab6_3_rest_assured/src/main/java/com/tqs/lab6_3/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lab6/lab6_3_rest_assured/src/test/java/com/tqs/lab6_3/RestAssuredTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab5_1_calculator_bdd/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab5_1_calculator_bdd/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tqs/lab5_2/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tqs/lab5_2/Library.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tqs/lab5_2/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tqs/lab5_2/Utils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/tqs/lab5_2/CucumberTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/tqs/lab5_2/CucumberTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/tqs/lab5_2/SearchBookTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/com.tqs.lab5_2/search_book.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/junit-platform.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/junit-platform.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,30 +15,39 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2ubUSTz6gngZD38LCRILKNnz01w" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JUnit.All in cucumber-java-skeleton (1).executor": "Debug",
-    "JUnit.All in cucumber-java-skeleton.executor": "Debug",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/diogo/Secretária/3º Ano/2º Semestre/TQS/P/TQS_114192/lab5/lab5_2_books",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.All in cucumber-java-skeleton (1).executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.All in cucumber-java-skeleton (2).executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.All in cucumber-java-skeleton.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/diogo/Secretária/3º Ano/2º Semestre/TQS/P/TQS_114192/lab5/lab5_2_books&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="JUnit.All in cucumber-java-skeleton (1)">
+}</component>
+  <component name="RunManager" selected="JUnit.All in cucumber-java-skeleton (2)">
     <configuration name="All in cucumber-java-skeleton (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="cucumber-java-skeleton" />
+      <module name="lab5_2_books" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in cucumber-java-skeleton (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lab5_2_books" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
       <method v="2">
@@ -69,7 +55,7 @@
       </method>
     </configuration>
     <configuration name="All in cucumber-java-skeleton" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="cucumber-java-skeleton" />
+      <module name="lab5_2_books" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
       <method v="2">
@@ -78,6 +64,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in cucumber-java-skeleton (2)" />
         <item itemvalue="JUnit.All in cucumber-java-skeleton (1)" />
         <item itemvalue="JUnit.All in cucumber-java-skeleton" />
       </list>
@@ -100,6 +87,10 @@
       <option name="presentableId" value="Default" />
       <updated>1742516767138</updated>
       <workItem from="1742516768391" duration="123000" />
+      <workItem from="1742548692824" duration="13000" />
+      <workItem from="1742548713693" duration="26000" />
+      <workItem from="1742549029319" duration="29000" />
+      <workItem from="1742549073767" duration="3000" />
     </task>
     <servers />
   </component>

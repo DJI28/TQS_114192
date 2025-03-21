@@ -7,8 +7,6 @@ import static io.restassured.RestAssured.*;
 
 // Given is only needed if we want to pass parameters to the request
 
-import static io.restassured.RestAssured.*;
-
 public class RestAssuredTest {
     @Test
     @DisplayName("ToDos Endpoint")

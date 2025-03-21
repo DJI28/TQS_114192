@@ -8,7 +8,7 @@ import jakarta.validation.constraints.NotNull;
 public class Car {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long carId;
 
     @Column(name = "maker")
@@ -19,7 +19,7 @@ public class Car {
     private String model;
 
     @Column(name = "segment")
-    private char segment;
+    private Character segment;
 
     @Column(name = "motortype")
     private String enginetype;
@@ -41,7 +41,7 @@ public class Car {
         this.model = model;
     }
 
-    public Car(String maker, String model, char segment, String enginetype, String transmission) {
+    public Car(String maker, String model, Character segment, String enginetype, String transmission) {
         this.maker = maker;
         this.model = model;
         this.segment = segment;
@@ -71,7 +71,7 @@ public class Car {
         return model;
     }
 
-    public char getSegment() {
+    public Character getSegment() {
         return segment;
     }
 
@@ -95,7 +95,7 @@ public class Car {
         this.model = model;
     }
 
-    public void setSegment(char segment) {
+    public void setSegment(Character segment) {
         this.segment = segment;
     }
 
