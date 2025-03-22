@@ -34,4 +34,14 @@ public class Library {
         books.sort((b1, b2) -> b2.getPublished().compareTo(b1.getPublished()));
         return books;
     }
+
+    public List<Book> findBooksByTitle(String title) {
+        List<Book> books = new ArrayList<>();
+        for (Book book : store) {
+            if (book.getTitle().equals(title)) {
+                books.add(book);
+            }
+        }
+        return books;
+    }
 }

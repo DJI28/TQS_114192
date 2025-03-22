@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b75855cb-57e6-4f0a-a044-08aecf31c020" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../lab5/lab5_2_books/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab5/lab5_2_books/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lab5/lab5_3_cover/src/main/java/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab5/lab5_3_cover/src/main/java/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/tqs/lab6_3/RestAssuredTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/tqs/lab6_3/RestAssuredTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab6_4_and_5_cars/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6_4_and_5_cars/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab6_4_and_5_cars/src/test/java/com/tqs/lab6_4_5/lab6_4_5_cars/CarsLab6IT.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6_4_and_5_cars/src/test/java/com/tqs/lab6_4_5/lab6_4_5_cars/CarsLab6IT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,26 +23,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;JUnit.All in lab6_3_rest_assured (1).executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.All in lab6_3_rest_assured (2).executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.All in lab6_3_rest_assured (3).executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.All in lab6_3_rest_assured.executor&quot;: &quot;Debug&quot;,
-    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.All in lab6_3_rest_assured (1).executor": "Debug",
+    "JUnit.All in lab6_3_rest_assured (2).executor": "Debug",
+    "JUnit.All in lab6_3_rest_assured (3).executor": "Debug",
+    "JUnit.All in lab6_3_rest_assured (4).executor": "Debug",
+    "JUnit.All in lab6_3_rest_assured.executor": "Debug",
+    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected="JUnit.All in lab6_3_rest_assured (3)">
+}]]></component>
+  <component name="RunManager" selected="JUnit.All in lab6_3_rest_assured (4)">
     <configuration name="All in lab6_3_rest_assured (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="lab6_3_rest_assured" />
       <option name="PACKAGE_NAME" value="" />
@@ -71,6 +68,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="All in lab6_3_rest_assured (4)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lab6_3_rest_assured" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="All in lab6_3_rest_assured" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="lab6_3_rest_assured" />
       <option name="PACKAGE_NAME" value="" />
@@ -81,6 +86,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in lab6_3_rest_assured (4)" />
         <item itemvalue="JUnit.All in lab6_3_rest_assured (3)" />
         <item itemvalue="JUnit.All in lab6_3_rest_assured (2)" />
         <item itemvalue="JUnit.All in lab6_3_rest_assured (1)" />
@@ -109,6 +115,7 @@
       <workItem from="1742575600874" duration="45000" />
       <workItem from="1742579366706" duration="94000" />
       <workItem from="1742585193302" duration="4000" />
+      <workItem from="1742647641075" duration="13000" />
     </task>
     <servers />
   </component>

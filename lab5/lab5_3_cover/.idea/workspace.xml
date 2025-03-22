@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="44291ea0-b5e8-4763-8949-10a37ce2e488" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab5_2_books/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab5_2_books/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lab6/lab6_3_rest_assured/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab6/lab6_3_rest_assured/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +55,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.All in lab5_3_cover (3)">
+  <component name="RunManager" selected="JUnit.All in lab5_3_cover (4)">
     <configuration name="All in lab5_3_cover (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="lab5_3_cover" />
       <option name="PACKAGE_NAME" value="" />
@@ -80,7 +80,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="All in lab5_3_cover (5)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="All in lab5_3_cover (4)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="lab5_3_cover" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
@@ -98,11 +98,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in lab5_3_cover (4)" />
         <item itemvalue="JUnit.All in lab5_3_cover (3)" />
         <item itemvalue="JUnit.All in lab5_3_cover (2)" />
         <item itemvalue="JUnit.All in lab5_3_cover (1)" />
         <item itemvalue="JUnit.All in lab5_3_cover" />
-        <item itemvalue="JUnit.All in lab5_3_cover (5)" />
       </list>
     </recent_temporary>
   </component>
@@ -128,6 +128,7 @@
       <workItem from="1742549082101" duration="5128000" />
       <workItem from="1742554218069" duration="377000" />
       <workItem from="1742572427864" duration="7000" />
+      <workItem from="1742647741639" duration="43000" />
     </task>
     <servers />
   </component>

@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.tqs.lab6_4_5.lab6_4_5_cars.repositories.CarRepositoryTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.408 s -- in com.tqs.lab6_4_5.lab6_4_5_cars.repositories.CarRepositoryTest

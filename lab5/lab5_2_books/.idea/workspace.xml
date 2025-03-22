@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="44291ea0-b5e8-4763-8949-10a37ce2e488" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab5_1_calculator_bdd/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab5_1_calculator_bdd/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tqs/lab5_2/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tqs/lab5_2/Library.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/tqs/lab5_2/SearchBookSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/tqs/lab5_2/SearchBookSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/com/tqs/lab5_2/search_book.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/com/tqs/lab5_2/search_book.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab5_3_cover/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab5_3_cover/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lab6/lab6_3_rest_assured/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab6/lab6_3_rest_assured/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +35,9 @@
     &quot;JUnit.All in cucumber-java-skeleton (1).executor&quot;: &quot;Debug&quot;,
     &quot;JUnit.All in cucumber-java-skeleton (2).executor&quot;: &quot;Run&quot;,
     &quot;JUnit.All in cucumber-java-skeleton.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.All in lab5_2_books (1).executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.All in lab5_2_books (2).executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.All in lab5_2_books.executor&quot;: &quot;Debug&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
@@ -37,7 +47,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.All in cucumber-java-skeleton (2)">
+  <component name="RunManager" selected="JUnit.All in lab5_2_books (2)">
     <configuration name="All in cucumber-java-skeleton (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="lab5_2_books" />
       <option name="PACKAGE_NAME" value="" />
@@ -54,7 +64,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="All in cucumber-java-skeleton" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="All in lab5_2_books (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lab5_2_books" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in lab5_2_books (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lab5_2_books" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in lab5_2_books" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="lab5_2_books" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
@@ -64,9 +90,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in lab5_2_books (2)" />
+        <item itemvalue="JUnit.All in lab5_2_books (1)" />
+        <item itemvalue="JUnit.All in lab5_2_books" />
         <item itemvalue="JUnit.All in cucumber-java-skeleton (2)" />
         <item itemvalue="JUnit.All in cucumber-java-skeleton (1)" />
-        <item itemvalue="JUnit.All in cucumber-java-skeleton" />
       </list>
     </recent_temporary>
   </component>
@@ -91,6 +119,9 @@
       <workItem from="1742548713693" duration="26000" />
       <workItem from="1742549029319" duration="29000" />
       <workItem from="1742549073767" duration="3000" />
+      <workItem from="1742647785641" duration="27000" />
+      <workItem from="1742658349930" duration="149000" />
+      <workItem from="1742659240782" duration="32000" />
     </task>
     <servers />
   </component>
