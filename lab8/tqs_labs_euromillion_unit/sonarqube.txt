@@ -1,0 +1,6 @@
+sqp_62806922e78ed6a3a13f689bc78d6d611ad9caca
+mvn clean verify sonar:sonar \
+  -Dsonar.projectKey=TQS-Lab-8.1-Euromillions \
+  -Dsonar.projectName='TQS Lab 8.1 Euromillions' \
+  -Dsonar.host.url=http://127.0.0.1:9000 \
+  -Dsonar.token=sqp_62806922e78ed6a3a13f689bc78d6d611ad9caca
