@@ -13,12 +13,12 @@ import com.tqs.hw1.services.ReservationService;
 import com.tqs.hw1.services.WeatherService;
 import com.tqs.hw1.utils.DateValidator;
 import com.tqs.hw1.utils.ReservationConverter;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.time.LocalDate;
 import java.util.Optional;
@@ -26,8 +26,9 @@ import java.util.Optional;
 import static org.assertj.core.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
+@ExtendWith(MockitoExtension.class)
 @DisplayName("Unit Tests - Business Logic (ReservationService, WeatherService, Utils)")
-class A_Service_UnitTest {
+class AServiceUnitTest {
 
     @Mock
     private ReservationRepository reservationRepository;
@@ -40,11 +41,6 @@ class A_Service_UnitTest {
 
     @InjectMocks
     private ReservationService reservationService;
-
-    @BeforeEach
-    void setup() {
-        MockitoAnnotations.openMocks(this);
-    }
 
     @Test
     @DisplayName("Should create a valid reservation successfully")
@@ -88,7 +84,7 @@ class A_Service_UnitTest {
 
         assertThatThrownBy(() -> reservationService.createReservation(request))
                 .isInstanceOf(IllegalStateException.class)
-                .hasMessageContaining("already reserved");
+                .hasMessageContaining("already exists");
     }
 
     @Test

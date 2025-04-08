@@ -24,7 +24,7 @@ import static org.assertj.core.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 @DisplayName("Service Tests with Mocked Dependencies")
-class B_ServiceTest {
+class BServiceTest {
 
     @Mock
     private ReservationRepository reservationRepository;
@@ -102,7 +102,7 @@ class B_ServiceTest {
         assertThatThrownBy(() -> reservationService.createReservation(
                 new com.tqs.hw1.dtos.ReservationRequestDTO(1L, date, MealType.LUNCH)))
                 .isInstanceOf(IllegalStateException.class)
-                .hasMessageContaining("already reserved");
+                .hasMessageContaining("already exists");
     }
 
     @Test
