@@ -69,6 +69,7 @@ jobs:
         run: cd HW1/backend && mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:5.1.0.4751:sonar -Dsonar.projectKey=DJI28_TQS_114192
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          WEATHER_API_KEY: ${{ secrets.WEATHER_API_KEY }}
 
       - name: Wait for SonarCloud Quality Gate result
         uses: SonarSource/sonarcloud-quality-gate-action@v1.1.0

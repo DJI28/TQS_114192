@@ -4,6 +4,9 @@ import com.tqs.hw1.entities.Meal;
 import com.tqs.hw1.entities.MealType;
 import com.tqs.hw1.entities.Reservation;
 import com.tqs.hw1.entities.Restaurant;
+import com.tqs.hw1.repositories.MealRepository;
+import com.tqs.hw1.repositories.ReservationRepository;
+import com.tqs.hw1.repositories.RestaurantRepository;
 import com.tqs.hw1.services.ReservationService;
 import com.tqs.hw1.services.WeatherService;
 import com.tqs.hw1.weather.WeatherForecast;
@@ -72,16 +75,16 @@ class B_ServiceTest {
     void testReservationService_CreateReservation_WithMockedRepos() {
         Restaurant restaurant = new Restaurant(1L, "Cantina");
         LocalDate date = LocalDate.now();
-        Meal meal = new Meal(1L, date, MealType.ALMOCO, restaurant);
+        Meal meal = new Meal(1L, date, MealType.LUNCH, restaurant);
 
         when(restaurantRepository.findById(1L)).thenReturn(Optional.of(restaurant));
-        when(mealRepository.findByRestaurantAndDateAndType(restaurant, date, MealType.ALMOCO)).thenReturn(Optional.of(meal));
-        when(reservationRepository.existsByRestaurantAndDateAndTypeAndCancelledFalse(restaurant, date, MealType.ALMOCO)).thenReturn(false);
+        when(mealRepository.findByRestaurantAndDateAndType(restaurant, date, MealType.LUNCH)).thenReturn(Optional.of(meal));
+        when(reservationRepository.existsByRestaurantAndDateAndTypeAndCancelledFalse(restaurant, date, MealType.LUNCH)).thenReturn(false);
 
-        var dto = reservationService.createReservation(new com.tqs.hw1.dto.ReservationRequestDTO(1L, date, MealType.ALMOCO));
+        var dto = reservationService.createReservation(new com.tqs.hw1.dtos.ReservationRequestDTO(1L, date, MealType.LUNCH));
 
         assertThat(dto).isNotNull();
-        assertThat(dto.getType()).isEqualTo(MealType.ALMOCO);
+        assertThat(dto.getType()).isEqualTo(MealType.LUNCH);
         assertThat(dto.getToken()).isNotBlank();
     }
 
@@ -90,14 +93,14 @@ class B_ServiceTest {
     void testReservationService_DuplicateReservation_WithMockedRepos() {
         Restaurant restaurant = new Restaurant(1L, "Cantina");
         LocalDate date = LocalDate.now();
-        Meal meal = new Meal(1L, date, MealType.ALMOCO, restaurant);
+        Meal meal = new Meal(1L, date, MealType.LUNCH, restaurant);
 
         when(restaurantRepository.findById(1L)).thenReturn(Optional.of(restaurant));
-        when(mealRepository.findByRestaurantAndDateAndType(restaurant, date, MealType.ALMOCO)).thenReturn(Optional.of(meal));
-        when(reservationRepository.existsByRestaurantAndDateAndTypeAndCancelledFalse(restaurant, date, MealType.ALMOCO)).thenReturn(true);
+        when(mealRepository.findByRestaurantAndDateAndType(restaurant, date, MealType.LUNCH)).thenReturn(Optional.of(meal));
+        when(reservationRepository.existsByRestaurantAndDateAndTypeAndCancelledFalse(restaurant, date, MealType.LUNCH)).thenReturn(true);
 
         assertThatThrownBy(() -> reservationService.createReservation(
-                new com.tqs.hw1.dto.ReservationRequestDTO(1L, date, MealType.ALMOCO)))
+                new com.tqs.hw1.dtos.ReservationRequestDTO(1L, date, MealType.LUNCH)))
                 .isInstanceOf(IllegalStateException.class)
                 .hasMessageContaining("already reserved");
     }
