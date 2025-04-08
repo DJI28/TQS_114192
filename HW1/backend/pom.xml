@@ -30,6 +30,8 @@
 		<java.version>21</java.version>
 		<sonar.organization>dji28</sonar.organization>
 		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
+		<selenium-java.version>4.29.0</selenium-java.version>
+		<selenium-jupiter.version>5.1.1</selenium-jupiter.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -79,6 +81,28 @@
 			<groupId>org.testcontainers</groupId>
 			<artifactId>postgresql</artifactId>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>${selenium-java.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.github.bonigarcia</groupId>
+			<artifactId>selenium-jupiter</artifactId>
+			<version>${selenium-jupiter.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>spring-mock-mvc</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.jacoco</groupId>
+			<artifactId>org.jacoco.core</artifactId>
+			<version>0.8.13</version>
 		</dependency>
 	</dependencies>
 
