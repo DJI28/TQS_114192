@@ -8,6 +8,7 @@ import com.tqs.hw1.entities.Restaurant;
 import com.tqs.hw1.repositories.ReservationRepository;
 import com.tqs.hw1.repositories.MealRepository;
 import com.tqs.hw1.repositories.RestaurantRepository;
+import com.tqs.hw1.utils.ReservationConverter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

@@ -71,8 +71,13 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           WEATHER_API_KEY: ${{ secrets.WEATHER_API_KEY }}
 
-      - name: Wait for SonarCloud Quality Gate result
-        uses: SonarSource/sonarcloud-quality-gate-action@v1.1.0
+      - name: SonarQube Quality Gate check
+        id: sonarqube-quality-gate-check
+        uses: sonarsource/sonarqube-quality-gate-action@master
+        # Force to fail step after specific time.
         timeout-minutes: 5
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
+      - name: "SonarQube Quality Gate Status"
+        run: echo "The Quality Gate status is ${{ steps.sonarqube-quality-gate-check.outputs.quality-gate-status }}"

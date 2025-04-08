@@ -9,7 +9,6 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.test.context.ActiveProfiles;
 
 import java.time.LocalDate;
@@ -22,10 +21,6 @@ import static org.hamcrest.Matchers.*;
 @DisplayName("API Integration Tests (H2 in-memory)")
 @ActiveProfiles("test")
 class C_IT {
-
-    @LocalServerPort
-    private int port;
-
     @BeforeAll
     static void configureRestAssured() {
         RestAssured.baseURI = "http://localhost";
