@@ -2,10 +2,6 @@ package com.tqs.hw1;
 
 import com.tqs.hw1.dto.ReservationRequestDTO;
 import com.tqs.hw1.dto.ReservationResponseDTO;
-import com.tqs.hw1.entities.*;
-import com.tqs.hw1.repositories.MealRepository;
-import com.tqs.hw1.repositories.ReservationRepository;
-import com.tqs.hw1.repositories.RestaurantRepository;
 import com.tqs.hw1.services.ReservationService;
 import com.tqs.hw1.services.WeatherService;
 import com.tqs.hw1.utils.DateValidator;
