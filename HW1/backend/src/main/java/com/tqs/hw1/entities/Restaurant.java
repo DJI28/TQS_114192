@@ -10,10 +10,16 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Restaurant {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String name;
+
+    private int capacity;
+
+    public Restaurant(String name, int capacity) {
+        this.name = name;
+        this.capacity = capacity;
+    }
 }

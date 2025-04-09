@@ -34,6 +34,12 @@ public class ReservationService {
             throw new IllegalStateException("Reservation already exists");
         }
 
+        int currentReservations = reservationRepository.countByRestaurantAndDateAndTypeAndCancelledFalse(
+                restaurant, request.getDate(), request.getType());
+        if (currentReservations >= restaurant.getCapacity()) {
+            throw new IllegalStateException("Restaurant is full");
+        }
+
         Reservation reservation = new Reservation();
         reservation.setToken(UUID.randomUUID().toString());
         reservation.setDate(request.getDate());

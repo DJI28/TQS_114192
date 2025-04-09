@@ -2,15 +2,13 @@ package com.tqs.hw1;
 
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import static org.junit.jupiter.api.Assertions.fail;
 
 @DisplayName("Functional Tests - Web UI with Selenium")
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
-class D_FuncionalTest {
+class D_Funcional {
 
     private WebDriver driver;
     private WebDriverWait wait;

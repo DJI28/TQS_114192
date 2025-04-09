@@ -19,6 +19,7 @@ public class MealService {
 
     public Meal updateMeal(Long id, Meal updatedMeal) {
         Meal meal = mealRepository.findById(id).orElseThrow(() -> new IllegalStateException("Meal not found"));
+        meal.setName(updatedMeal.getName());
         meal.setDate(updatedMeal.getDate());
         meal.setType(updatedMeal.getType());
         meal.setRestaurant(updatedMeal.getRestaurant());

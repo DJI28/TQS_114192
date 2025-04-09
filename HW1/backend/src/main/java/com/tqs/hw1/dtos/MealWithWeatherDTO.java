@@ -13,6 +13,7 @@ import java.time.LocalDate;
 @AllArgsConstructor
 public class MealWithWeatherDTO {
     private Long id;
+    private String name;
     private LocalDate date;
     private MealType type;
     private Long restaurantId;

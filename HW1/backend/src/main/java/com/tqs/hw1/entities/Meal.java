@@ -16,6 +16,8 @@ public class Meal {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private String name;
+
     private LocalDate date;
 
     @Enumerated(EnumType.STRING)
@@ -23,4 +25,11 @@ public class Meal {
 
     @ManyToOne
     private Restaurant restaurant;
+
+    public Meal(String name, LocalDate date, MealType type, Restaurant restaurant) {
+        this.name = name;
+        this.date = date;
+        this.type = type;
+        this.restaurant = restaurant;
+    }
 }

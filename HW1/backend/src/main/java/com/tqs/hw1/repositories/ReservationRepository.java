@@ -11,4 +11,5 @@ import java.util.Optional;
 public interface ReservationRepository extends JpaRepository<Reservation, Long> {
     boolean existsByRestaurantAndDateAndTypeAndCancelledFalse(Restaurant restaurant, LocalDate date, MealType type);
     Optional<Reservation> findByToken(String token);
+    int countByRestaurantAndDateAndTypeAndCancelledFalse(Restaurant restaurant, LocalDate date, MealType type); // ← novo método
 }

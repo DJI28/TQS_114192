@@ -17,8 +17,12 @@ public class RestaurantService {
         return restaurantRepository.save(restaurant);
     }
 
-    public Restaurant updateRestaurant(Restaurant restaurant) {
-        return restaurantRepository.save(restaurant);
+    public Restaurant updateRestaurant(Long id, Restaurant restaurant) {
+        Restaurant existingRestaurant = restaurantRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Restaurant not found"));
+        existingRestaurant.setName(restaurant.getName());
+        existingRestaurant.setCapacity(restaurant.getCapacity());
+        return restaurantRepository.save(existingRestaurant);
     }
 
     public void deleteRestaurant(Long id) {

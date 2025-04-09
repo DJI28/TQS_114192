@@ -29,6 +29,7 @@ public class MealController {
             WeatherForecast forecast = weatherService.getForecast("Aveiro", meal.getDate());
             return new MealWithWeatherDTO(
                     meal.getId(),
+                    meal.getName(),
                     meal.getDate(),
                     meal.getType(),
                     meal.getRestaurant().getId(),

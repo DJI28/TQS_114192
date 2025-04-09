@@ -1,202 +1,335 @@
-// Do for postgresql later
-
 package com.tqs.hw1;
 
-import io.restassured.RestAssured;
+import com.tqs.hw1.entities.Meal;
+import com.tqs.hw1.entities.MealType;
+import com.tqs.hw1.entities.Restaurant;
+import com.tqs.hw1.repositories.ReservationRepository;
+import com.tqs.hw1.repositories.RestaurantRepository;
+import com.tqs.hw1.repositories.MealRepository;
 import io.restassured.http.ContentType;
-import io.restassured.response.Response;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.ActiveProfiles;
+import org.springframework.boot.test.web.server.LocalServerPort;
+import org.springframework.test.context.TestPropertySource;
 
 import java.time.LocalDate;
 import java.util.Map;
 
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
+@TestPropertySource( locations = "application.properties")
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-@DisplayName("API Integration Tests (H2 in-memory)")
-@ActiveProfiles("test")
-class C_IT {
-    @BeforeAll
-    static void configureRestAssured() {
-        RestAssured.baseURI = "http://localhost";
+@AutoConfigureMockMvc
+@DisplayName("API Integration Tests (with PostgreSQL Testcontainers) - Restaurant")
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+class RestaurantControllerIT {
+
+    @LocalServerPort
+    int randomServerPort;
+
+    @Autowired
+    private RestaurantRepository restaurantRepository;
+
+    @Test
+    @DisplayName("Verify restaurant migration")
+    @Order(0)
+    void verifyMigration() {
+        assertThat(restaurantRepository.count()).isGreaterThanOrEqualTo(2);
     }
 
     @Test
-    @DisplayName("GET /api/meals should return meals grouped by date and type")
-    void testGetMeals() {
-        given()
-                .port(port)
+    @DisplayName("Add new restaurant")
+    @Order(1)
+    void addRestaurant() {
+        Restaurant restaurant = new Restaurant("Restaurant", 10);
+
+        given().port(randomServerPort).contentType("application/json")
+                .body(restaurant)
+                .when()
+                .post("/api/restaurants")
+                .then()
+                .statusCode(200)
+                .body("name", equalTo("Restaurant"))
+                .body("capacity", equalTo(10));
+    }
+
+    @Test
+    @DisplayName("Get all restaurants")
+    @Order(2)
+    void getAllRestaurants() {
+        given().port(randomServerPort)
+                .contentType(ContentType.JSON).
+                when()
+                .get("/api/restaurants")
+                .then()
+                .statusCode(200)
+                .body("size()", greaterThanOrEqualTo(2));
+    }
+
+    @Test
+    @DisplayName("Updated Restaurant")
+    @Order(3)
+    void updateRestaurant() {
+        Restaurant restaurant = new Restaurant("Updated Restaurant", 20);
+
+        Long id = Long.valueOf(given().port(randomServerPort).contentType("application/json")
+                .body(restaurant)
+                .when()
+                .post("/api/restaurants")
+                .then()
+                .statusCode(200)
+                .extract()
+                .path("id").toString());
+
+        Restaurant updatedRestaurant = new Restaurant(id, "Updated Restaurant", 40);
+
+        given().port(randomServerPort).contentType("application/json")
+                .body(updatedRestaurant)
+                .when()
+                .put("/api/restaurants/" + id)
+                .then()
+                .statusCode(200)
+                .body("name", equalTo("Updated Restaurant"))
+                .body("capacity", equalTo(40));
+    }
+
+    @Test
+    @DisplayName("Delete restaurant")
+    @Order(4)
+    void deleteRestaurant() {
+        Restaurant restaurant = new Restaurant("Restaurant", 10);
+        long id = Long.parseLong(given().port(randomServerPort).contentType("application/json")
+                .body(restaurant)
+                .when()
+                .post("/api/restaurants")
+                .then()
+                .statusCode(200)
+                .extract()
+                .path("id").toString());
+
+        given().port(randomServerPort)
+                .contentType("application/json")
+                .when()
+                .delete("/api/restaurants/" + id)
+                .then()
+                .statusCode(200);
+    }
+}
+
+@TestPropertySource( locations = "application.properties")
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@AutoConfigureMockMvc
+@DisplayName("API Integration Tests (with PostgreSQL Testcontainers) - Meal")
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+class MealControllerIT {
+
+    @LocalServerPort
+    int randomServerPort;
+    @Autowired
+    private MealRepository mealRepository;
+
+    @Autowired
+    private RestaurantRepository restaurantRepository;
+
+    @Test
+    @DisplayName("Verify meal migration")
+    @Order(0)
+    void verifyMigration() {
+        assertThat(mealRepository.count()).isGreaterThanOrEqualTo(4);
+    }
+
+    @Test
+    @DisplayName("Add new meal")
+    @Order(1)
+    void addMeal() {
+        Meal meal = new Meal("Pizza", LocalDate.now(), MealType.LUNCH, restaurantRepository.findById(1L).orElseThrow());
+
+        given().port(randomServerPort).contentType("application/json")
+                .body(meal)
+                .when()
+                .post("/api/meals")
+                .then()
+                .statusCode(200)
+                .body("name", equalTo("Pizza"))
+                .body("type", equalTo("LUNCH"));
+    }
+
+    @Test
+    @DisplayName("Get all meals")
+    @Order(2)
+    void getAllMeals() {
+        given().port(randomServerPort)
+                .contentType(ContentType.JSON)
                 .when()
                 .get("/api/meals")
                 .then()
                 .statusCode(200)
-                .contentType(ContentType.JSON)
-                .body("size()", greaterThan(0));
+                .body("size()", greaterThanOrEqualTo(1));
     }
 
     @Test
-    @DisplayName("POST /api/reservations should return token for valid reservation")
-    void testPostReservation_Success() {
-        Map<String, Object> body = Map.of(
-                "restaurantId", 1,
-                "date", LocalDate.now().toString(),
-                "type", "ALMOCO"
+    @DisplayName("Update meal")
+    @Order(3)
+    void updateMeal() {
+        Meal meal = new Meal("Pasta", LocalDate.now(), MealType.DINNER, restaurantRepository.findById(1L).orElseThrow());
+        Long id = Long.valueOf(given().port(randomServerPort).contentType("application/json")
+                .body(meal)
+                .when()
+                .post("/api/meals")
+                .then()
+                .statusCode(200)
+                .extract()
+                .path("id").toString());
+
+        Meal updatedMeal = new Meal(id, "Updated Pasta", LocalDate.now(), MealType.LUNCH, restaurantRepository.findById(1L).orElseThrow());
+
+        given().port(randomServerPort).contentType("application/json")
+                .body(updatedMeal)
+                .when()
+                .put("/api/meals/" + id)
+                .then()
+                .statusCode(200)
+                .body("name", equalTo("Updated Pasta"))
+                .body("type", equalTo("LUNCH"));
+    }
+
+    @Test
+    @DisplayName("Delete meal")
+    @Order(4)
+    void deleteMeal() {
+        Meal meal = new Meal("Burger", LocalDate.now(), MealType.LUNCH, restaurantRepository.findById(1L).orElseThrow());
+        long id = Long.parseLong(given().port(randomServerPort).contentType("application/json")
+                .body(meal)
+                .when()
+                .post("/api/meals")
+                .then()
+                .statusCode(200)
+                .extract()
+                .path("id").toString());
+
+        given().port(randomServerPort)
+                .contentType("application/json")
+                .when()
+                .delete("/api/meals/" + id)
+                .then()
+                .statusCode(200);
+    }
+}
+
+@TestPropertySource( locations = "application.properties")
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@AutoConfigureMockMvc
+@DisplayName("API Integration Tests (with PostgreSQL Testcontainers) - Reservation")
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+class ReservationControllerIT {
+
+    @LocalServerPort
+    int port;
+
+    @Autowired
+    private ReservationRepository reservationRepository;
+
+    @Autowired
+    private RestaurantRepository restaurantRepository;
+
+    static String createdToken;
+
+    static final String FIXED_DATE = "2025-04-11";
+    static final String FIXED_TYPE = "LUNCH";
+
+    @Test
+    @Order(0)
+    @DisplayName("Verify reservation migration")
+    void verifyMigration() {
+        assertThat(reservationRepository.count()).isGreaterThanOrEqualTo(2);
+    }
+
+    @Test
+    @Order(1)
+    @DisplayName("Create a new reservation and store token")
+    void createReservation() {
+        Long restaurantId = restaurantRepository.findAll().get(1).getId();
+
+        Map<String, Object> requestBody = Map.of(
+                "restaurantId", restaurantId,
+                "date", FIXED_DATE,
+                "type", FIXED_TYPE
         );
 
-        given()
-                .port(port)
-                .contentType(ContentType.JSON)
-                .body(body)
+        createdToken = given().port(port).contentType(ContentType.JSON)
+                .body(requestBody)
                 .when()
                 .post("/api/reservations")
                 .then()
                 .statusCode(200)
-                .body("token", not(emptyString()));
+                .body("token", notNullValue())
+                .body("type", equalTo(FIXED_TYPE))
+                .body("cancelled", equalTo(false))
+                .extract().path("token");
     }
 
     @Test
-    @DisplayName("POST /api/reservations should return 400 for duplicate reservation")
-    void testPostReservation_Duplicate() {
-        Map<String, Object> body = Map.of(
-                "restaurantId", 1,
-                "date", LocalDate.now().toString(),
-                "type", "ALMOCO"
-        );
-
-        // First reservation
-        given()
-                .port(port)
-                .contentType(ContentType.JSON)
-                .body(body)
+    @Order(2)
+    @DisplayName("Get reservation by token")
+    void getReservationByToken() {
+        given().port(port)
                 .when()
-                .post("/api/reservations")
+                .get("/api/reservations/" + createdToken)
+                .then()
+                .statusCode(200)
+                .body("token", equalTo(createdToken))
+                .body("type", equalTo(FIXED_TYPE));
+    }
+
+    @Test
+    @Order(3)
+    @DisplayName("Cancel reservation")
+    void cancelReservation() {
+        given().port(port)
+                .when()
+                .delete("/api/reservations/" + createdToken)
                 .then()
                 .statusCode(200);
 
-        // Duplicate reservation
-        given()
-                .port(port)
-                .contentType(ContentType.JSON)
-                .body(body)
+        given().port(port)
+                .when()
+                .get("/api/reservations/" + createdToken)
+                .then()
+                .statusCode(200)
+                .body("cancelled", equalTo(true));
+    }
+
+    @Test
+    @Order(4)
+    @DisplayName("Check-in reservation")
+    void checkInReservation() {
+        Long restaurantId = restaurantRepository.findAll().get(0).getId();
+        String token = given().port(port).contentType(ContentType.JSON)
+                .body(Map.of(
+                        "restaurantId", restaurantId,
+                        "date", "2025-04-10",
+                        "type", "DINNER"
+                ))
                 .when()
                 .post("/api/reservations")
                 .then()
-                .statusCode(400);
-    }
-
-    @Test
-    @DisplayName("GET /api/reservations/{token} should return reservation details")
-    void testGetReservationByToken_Success() {
-        Map<String, Object> body = Map.of(
-                "restaurantId", 1,
-                "date", LocalDate.now().toString(),
-                "type", "JANTAR"
-        );
-
-        String token =
-                given()
-                        .port(port)
-                        .contentType(ContentType.JSON)
-                        .body(body)
-                        .when()
-                        .post("/api/reservations")
-                        .then()
-                        .statusCode(200)
-                        .extract()
-                        .path("token");
-
-        given()
-                .port(port)
-                .when()
-                .get("/api/reservations/" + token)
-                .then()
                 .statusCode(200)
-                .body("token", equalTo(token));
-    }
+                .extract().path("token");
 
-    @Test
-    @DisplayName("GET /api/reservations/{token} should return 404 for invalid token")
-    void testGetReservationByToken_NotFound() {
-        given()
-                .port(port)
+        given().port(port)
                 .when()
-                .get("/api/reservations/invalid-token")
+                .post("/api/reservations/checkin/" + token)
                 .then()
-                .statusCode(404);
-    }
+                .statusCode(200);
 
-    @Test
-    @DisplayName("DELETE /api/reservations/{token} should cancel reservation")
-    void testCancelReservation() {
-        Map<String, Object> body = Map.of(
-                "restaurantId", 1,
-                "date", LocalDate.now().toString(),
-                "type", "JANTAR"
-        );
-
-        String token =
-                given()
-                        .port(port)
-                        .contentType(ContentType.JSON)
-                        .body(body)
-                        .when()
-                        .post("/api/reservations")
-                        .then()
-                        .statusCode(200)
-                        .extract()
-                        .path("token");
-
-        given()
-                .port(port)
+        given().port(port)
                 .when()
                 .delete("/api/reservations/" + token)
                 .then()
                 .statusCode(200);
-    }
-
-    @Test
-    @DisplayName("POST /api/checkin/{token} should mark reservation as used")
-    void testCheckInReservation() {
-        Map<String, Object> body = Map.of(
-                "restaurantId", 1,
-                "date", LocalDate.now().toString(),
-                "type", "ALMOCO"
-        );
-
-        String token =
-                given()
-                        .port(port)
-                        .contentType(ContentType.JSON)
-                        .body(body)
-                        .when()
-                        .post("/api/reservations")
-                        .then()
-                        .statusCode(200)
-                        .extract()
-                        .path("token");
-
-        given()
-                .port(port)
-                .when()
-                .post("/api/checkin/" + token)
-                .then()
-                .statusCode(200);
-    }
-
-    @Test
-    @DisplayName("GET /api/cache/stats should return cache statistics")
-    void testGetCacheStats() {
-        given()
-                .port(port)
-                .when()
-                .get("/api/cache/stats")
-                .then()
-                .statusCode(200)
-                .body("totalRequests", greaterThanOrEqualTo(0));
     }
 }

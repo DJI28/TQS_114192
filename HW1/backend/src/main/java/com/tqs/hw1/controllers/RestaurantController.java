@@ -31,8 +31,10 @@ public class RestaurantController {
         return ResponseEntity.ok(restaurantService.getAllRestaurants());
     }
 
-    @PutMapping
-    public ResponseEntity<Restaurant> updateRestaurant(@RequestBody Restaurant restaurant) {
-        return ResponseEntity.ok(restaurantService.updateRestaurant(restaurant));
+    @PutMapping("/{id}")
+    public ResponseEntity<Restaurant> updateRestaurant(
+            @PathVariable Long id,
+            @RequestBody Restaurant restaurant) {
+        return ResponseEntity.ok(restaurantService.updateRestaurant(id, restaurant));
     }
 }
