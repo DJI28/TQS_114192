@@ -62,7 +62,7 @@ const Navbar = () => {
         width: '100%'
       }}>
         <Link to="/" id="navbar-title" style={{ textDecoration: 'none', color: 'white', fontSize: '24px', fontWeight: 'bold' }}>
-          MealBooking
+          MealBooking - Moliceiro University
         </Link>
         <div>
           <button id="cancel-btn" onClick={() => setShowCancelModal(true)} style={{ marginRight: '10px' }}>
