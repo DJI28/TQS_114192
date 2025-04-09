@@ -182,6 +182,14 @@ class ReservationTest {
                 .isInstanceOf(IllegalStateException.class)
                 .hasMessageContaining("Token not found");
     }
+
+    @Test
+    @DisplayName("Should retrieve all reservations")
+    void testGetAllReservations() {
+        when(reservationRepository.findAll()).thenReturn(List.of(new Reservation(), new Reservation()));
+        List<ReservationResponseDTO> reservations = reservationService.getAllReservations();
+        assertThat(reservations).hasSize(2);
+    }
 }
 
 @DisplayName("Unit Tests - Utils")
