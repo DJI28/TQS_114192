@@ -26,7 +26,7 @@ public class WeatherService {
     private final RestTemplate restTemplate = new RestTemplate();
     private final ObjectMapper mapper = new ObjectMapper();
 
-    private static final long TTL = 5 * 60 * 1000;
+    private static final long TTL = 5L * 60 * 1000;
 
     public WeatherForecast getForecast(String location, LocalDate date) {
         String key = location + ":" + date;
