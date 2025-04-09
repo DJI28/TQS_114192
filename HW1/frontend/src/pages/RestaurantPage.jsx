@@ -12,8 +12,6 @@ function RestaurantPage() {
   }, [id]);
 
   const handleReserve = (mealId, date, type) => {
-    const token = localStorage.getItem("userToken"); // se usares tokens, adapta aqui
-
     fetch('http://localhost:8080/api/reservations', {
       method: 'POST',
       headers: {
@@ -27,11 +25,10 @@ function RestaurantPage() {
     })
       .then(res => res.json())
       .then(data => {
-        alert(`Reserva criada! Token: ${data.token}`);
-        // Podes guardar o token no localStorage ou redirecionar
+        alert(`Reservation created! Token: ${data.token}`);
       })
       .catch(err => {
-        alert("Erro ao reservar.");
+        alert("Error while creating reservation.");
         console.error(err);
       });
   };
@@ -39,16 +36,16 @@ function RestaurantPage() {
   return (
     <div id="restaurant-page" style={{ padding: '20px', width: '100%' }}>
       <h2 id="restaurant-meals-title" style={{ textAlign: 'center', fontSize: '28px', marginBottom: '20px' }}>
-        Refeições Disponíveis
+        Available Meals
       </h2>
 
       <table id="meals-table" style={{ width: '100%', borderCollapse: 'collapse' }}>
         <thead>
           <tr style={{ backgroundColor: '#34495e', color: 'white' }}>
-            <th style={{ padding: '10px' }}>Nome</th>
-            <th style={{ padding: '10px' }}>Data</th>
-            <th style={{ padding: '10px' }}>Tipo</th>
-            <th style={{ padding: '10px' }}>Ação</th>
+            <th style={{ padding: '10px' }}>Name</th>
+            <th style={{ padding: '10px' }}>Date</th>
+            <th style={{ padding: '10px' }}>Type</th>
+            <th style={{ padding: '10px' }}>Action</th>
           </tr>
         </thead>
         <tbody>
@@ -70,7 +67,7 @@ function RestaurantPage() {
                     cursor: 'pointer'
                   }}
                 >
-                  Reservar
+                  Reserve
                 </button>
               </td>
             </tr>

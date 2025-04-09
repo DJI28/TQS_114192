@@ -96,25 +96,25 @@ const Navbar = () => {
         </div>
       )}
 
-      {toast && (
-        <div
-          id="toast"
-          style={{
-            position: 'fixed',
-            top: '20px',
-            right: '20px',
-            padding: '12px 20px',
-            backgroundColor: toast.success ? '#27ae60' : '#c0392b',
-            color: 'white',
-            borderRadius: '6px',
-            boxShadow: '0 2px 10px rgba(0,0,0,0.2)',
-            zIndex: 2000,
-            maxWidth: '300px'
-          }}
-        >
-          {toast.message}
-        </div>
-      )}
+    {toast && (
+      <div
+        id={toast.success ? "success-toast" : "error-toast"}
+        style={{
+          position: 'fixed',
+          top: '20px',
+          right: '20px',
+          padding: '12px 20px',
+          backgroundColor: toast.success ? '#27ae60' : '#c0392b',
+          color: 'white',
+          borderRadius: '6px',
+          boxShadow: '0 2px 10px rgba(0,0,0,0.2)',
+          zIndex: 2000,
+          maxWidth: '300px'
+        }}
+      >
+        {toast.message}
+      </div>
+    )}
     </>
   );
 };

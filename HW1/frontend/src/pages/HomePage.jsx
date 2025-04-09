@@ -19,7 +19,7 @@ const HomePage = () => {
   return (
     <div id="homepage" style={{ width: '100%', padding: '20px', boxSizing: 'border-box' }}>
       <h2 id="restaurants-title" style={{ textAlign: 'center', fontSize: '28px' }}>
-        Avaliable Restaurants
+        Available Restaurants
       </h2>
 
       <ul id="restaurant-list" style={{ listStyle: 'none', padding: 0 }}>

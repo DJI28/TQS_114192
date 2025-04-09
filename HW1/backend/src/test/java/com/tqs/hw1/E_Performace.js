@@ -1,51 +1,48 @@
 import http from 'k6/http';
 import { check, sleep } from 'k6';
 
-export const options = {
-    scenarios: {
-        get_meals: {
-            executor: 'constant-vus',
-            vus: 10,
-            duration: '30s',
-            exec: 'getMeals',
-        },
-        post_reservation: {
-            executor: 'constant-vus',
-            vus: 10,
-            duration: '30s',
-            exec: 'postReservation',
-            startTime: '10s'
-        },
-    },
+const BASE_URL = 'http://localhost:8080';
+
+export let options = {
+    stages: [
+        { duration: '30s', target: 50 },
+        { duration: '1m', target: 100 },
+        { duration: '30s', target: 0 },
+    ],
 };
 
-// Função para GET /api/meals
-export function getMeals() {
-    const res = http.get('http://localhost:8080/api/meals');
-
-    check(res, {
-        'GET status is 200': (r) => r.status === 200,
-        'GET body is not empty': (r) => r.body.length > 0,
+export default function () {
+    let payload = JSON.stringify({
+        restaurantId: 6,
+        date: '2025-04-10',
+        type: 'LUNCH',
     });
 
-    sleep(1);
-}
+    let params = {
+        headers: {
+            'Content-Type': 'application/json',
+        },
+    };
 
-// Função para POST /api/reservations
-export function postReservation() {
-    const payload = JSON.stringify({
-        restaurantId: 1,
-        date: '2025-04-09',
-        type: 'ALMOCO',
-    });
-
-    const headers = { 'Content-Type': 'application/json' };
-
-    const res = http.post('http://localhost:8080/api/reservations', payload, { headers });
+    let res = http.post(`${BASE_URL}/api/reservations`, payload, params);
 
     check(res, {
-        'POST status is 200': (r) => r.status === 200,
-        'received token': (r) => !!r.json('token'),
+        'is status 200': (r) => r.status === 200,
+        'token is returned': (r) => r.body.includes('token'),
+    });
+
+    let restaurantsRes = http.get(`${BASE_URL}/api/restaurants`);
+
+    check(restaurantsRes, {
+        'restaurants GET status is 200': (r) => r.status === 200,
+        'restaurants list is not empty': (r) => JSON.parse(r.body).length > 0,
+    });
+
+    let mealsRes = http.get(`${BASE_URL}/api/meals`);
+
+    check(mealsRes, {
+        'meals GET status is 200': (r) => r.status === 200,
+        'meals list is not empty': (r) => JSON.parse(r.body).length > 0,
     });
 
     sleep(1);
