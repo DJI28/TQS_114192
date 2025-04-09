@@ -45,6 +45,7 @@ function RestaurantPage() {
             <th style={{ padding: '10px' }}>Name</th>
             <th style={{ padding: '10px' }}>Date</th>
             <th style={{ padding: '10px' }}>Type</th>
+            <th style={{ padding: '10px' }}>Weather</th> {/* Column for Weather */}
             <th style={{ padding: '10px' }}>Action</th>
           </tr>
         </thead>
@@ -54,6 +55,14 @@ function RestaurantPage() {
               <td style={{ padding: '10px' }}>{meal.name}</td>
               <td style={{ padding: '10px' }}>{meal.date}</td>
               <td style={{ padding: '10px' }}>{meal.type}</td>
+              {/* Displaying weather information */}
+              <td style={{ padding: '10px' }}>
+                {meal.weather ? (
+                  <span>{meal.weather.description}, {meal.weather.temperature}°C</span>
+                ) : (
+                  <span>Loading weather...</span>
+                )}
+              </td>
               <td style={{ padding: '10px' }}>
                 <button
                   id={`reserve-btn-${meal.id}`}
