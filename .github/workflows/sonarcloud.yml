@@ -66,9 +66,8 @@ jobs:
           restore-keys: ${{ runner.os }}-m2
 
       - name: Change to backend directory and run SonarCloud analysis
-        run: cd HW1/backend && mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:5.1.0.4751:sonar \
-          -Dsonar.projectKey=DJI28_TQS_114192 \
-          -Dsonar.exclusions=**/C_IT.java
+        run: cd HW1/backend && mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:5.1.0.4751:sonar -Dsonar.projectKey=DJI28_TQS_114192 -Dsonar.test.exclusions=**/C_IT.java
+
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           WEATHER_API_KEY: ${{ secrets.WEATHER_API_KEY }}
