@@ -13,6 +13,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.UUID;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -29,13 +31,9 @@ public class ReservationService {
         Meal meal = mealRepository.findByRestaurantAndDateAndType(restaurant, request.getDate(), request.getType())
                 .orElseThrow(() -> new IllegalStateException("No meal available on this date"));
 
-        boolean exists = reservationRepository.existsByRestaurantAndDateAndTypeAndCancelledFalse(restaurant, request.getDate(), request.getType());
-        if (exists) {
-            throw new IllegalStateException("Reservation already exists");
-        }
-
         int currentReservations = reservationRepository.countByRestaurantAndDateAndTypeAndCancelledFalse(
                 restaurant, request.getDate(), request.getType());
+
         if (currentReservations >= restaurant.getCapacity()) {
             throw new IllegalStateException("Restaurant is full");
         }
@@ -70,5 +68,11 @@ public class ReservationService {
         if (res.isCheckedIn()) throw new IllegalStateException("Already checked-in");
         res.setCheckedIn(true);
         reservationRepository.save(res);
+    }
+
+    public List<ReservationResponseDTO> getAllReservations() {
+        return reservationRepository.findAll().stream()
+                .map(ReservationConverter::toDTO)
+                .collect(Collectors.toList());
     }
 }

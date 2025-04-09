@@ -6,6 +6,7 @@ import com.tqs.hw1.services.ReservationService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/reservations")
@@ -17,6 +18,11 @@ public class ReservationController {
     @PostMapping
     public ResponseEntity<ReservationResponseDTO> createReservation(@RequestBody ReservationRequestDTO dto) {
         return ResponseEntity.ok(reservationService.createReservation(dto));
+    }
+
+    @GetMapping
+    public ResponseEntity<List<ReservationResponseDTO>> getAllReservations() {
+        return ResponseEntity.ok(reservationService.getAllReservations());
     }
 
     @GetMapping("/{token}")

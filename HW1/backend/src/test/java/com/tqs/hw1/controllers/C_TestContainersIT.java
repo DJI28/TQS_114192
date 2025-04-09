@@ -1,4 +1,4 @@
-    package com.tqs.hw1;
+    package com.tqs.hw1.controllers;
 
     import com.tqs.hw1.entities.Meal;
     import com.tqs.hw1.entities.MealType;

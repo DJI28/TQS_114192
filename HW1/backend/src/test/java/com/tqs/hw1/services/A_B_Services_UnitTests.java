@@ -1,4 +1,4 @@
-package com.tqs.hw1;
+package com.tqs.hw1.services;
 
 import com.tqs.hw1.dtos.ReservationRequestDTO;
 import com.tqs.hw1.dtos.ReservationResponseDTO;
@@ -9,10 +9,6 @@ import com.tqs.hw1.entities.Reservation;
 import com.tqs.hw1.repositories.MealRepository;
 import com.tqs.hw1.repositories.ReservationRepository;
 import com.tqs.hw1.repositories.RestaurantRepository;
-import com.tqs.hw1.services.MealService;
-import com.tqs.hw1.services.ReservationService;
-import com.tqs.hw1.services.RestaurantService;
-import com.tqs.hw1.services.WeatherService;
 import com.tqs.hw1.weather.WeatherForecast;
 import com.tqs.hw1.utils.DateValidator;
 import com.tqs.hw1.utils.ReservationConverter;
@@ -53,7 +49,7 @@ class ReservationTest {
 
         when(restaurantRepository.findById(1L)).thenReturn(Optional.of(restaurant));
         when(mealRepository.findByRestaurantAndDateAndType(restaurant, meal.getDate(), meal.getType())).thenReturn(Optional.of(meal));
-        when(reservationRepository.existsByRestaurantAndDateAndTypeAndCancelledFalse(restaurant, meal.getDate(), meal.getType())).thenReturn(false);
+        when(reservationRepository.countByRestaurantAndDateAndTypeAndCancelledFalse(restaurant, meal.getDate(), meal.getType())).thenReturn(0);
 
         ReservationResponseDTO response = reservationService.createReservation(request);
 
@@ -74,33 +70,16 @@ class ReservationTest {
     }
 
     @Test
-    @DisplayName("Should fail when trying to create a duplicate reservation (same day, type, restaurant)")
-    void testCreateReservation_DuplicateReservation() {
-        Restaurant restaurant = new Restaurant(1L, "Cantina", 5);
-        Meal meal = new Meal(1L, "Meal 1",LocalDate.now(), MealType.LUNCH, restaurant);
-        ReservationRequestDTO request = new ReservationRequestDTO(1L, meal.getDate(), meal.getType());
-
-        when(restaurantRepository.findById(1L)).thenReturn(Optional.of(restaurant));
-        when(mealRepository.findByRestaurantAndDateAndType(restaurant, meal.getDate(), meal.getType())).thenReturn(Optional.of(meal));
-        when(reservationRepository.existsByRestaurantAndDateAndTypeAndCancelledFalse(restaurant, meal.getDate(), meal.getType())).thenReturn(true);
-
-        assertThatThrownBy(() -> reservationService.createReservation(request))
-                .isInstanceOf(IllegalStateException.class)
-                .hasMessageContaining("already exists");
-    }
-
-    @Test
     @DisplayName("Should fail when restaurant capacity is full")
     void testCreateReservation_CapacityFull() {
         Restaurant restaurant = new Restaurant(1L, "Cantina", 1);
         LocalDate date = LocalDate.now();
-        Meal meal = new Meal(1L, "Meal 1",date, MealType.LUNCH, restaurant);
+        Meal meal = new Meal(1L, "Meal 1", date, MealType.LUNCH, restaurant);
 
         ReservationRequestDTO request = new ReservationRequestDTO(1L, date, MealType.LUNCH);
 
         when(restaurantRepository.findById(1L)).thenReturn(Optional.of(restaurant));
         when(mealRepository.findByRestaurantAndDateAndType(restaurant, date, MealType.LUNCH)).thenReturn(Optional.of(meal));
-        when(reservationRepository.existsByRestaurantAndDateAndTypeAndCancelledFalse(restaurant, date, MealType.LUNCH)).thenReturn(false);
         when(reservationRepository.countByRestaurantAndDateAndTypeAndCancelledFalse(restaurant, date, MealType.LUNCH)).thenReturn(1);
 
         assertThatThrownBy(() -> reservationService.createReservation(request))
